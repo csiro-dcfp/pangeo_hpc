@@ -60,7 +60,7 @@ Users will also need to have a github account.
 		}
 	```
 	Note, you will need to edit the `PANGEO_RUN_SCRIPT_DIR` variable. 
-8. Run the `pangeo` function or submit `start_jupyter.sh` to the queue. For the former, instructions for setting up port forwarding will be printed to your screen. For the latter, you'll have to parse them from the `jupyter_instructions.txt` file that will appear in the current directory. In both cases, the instructions will only appear once your jobs leaves the queue which may take a minute or so.
-9. Following the instructions to view your JupyterLab instance via a web browser.
-10. The key step to getting `dask-jobqueue` running on Gadi is the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `run_dask-jobqueue_Gadi.ipynb`.  
+8. Run the `pangeo` function or submit `start_jupyter.sh` to the queue. For the former, instructions for setting up port forwarding to view your JupyterLab session will be printed to your screen. For the latter, you'll have to parse them from the `jupyter_instructions.txt` file that will appear in the current directory. In both cases, the instructions will only appear once your jobs leaves the queue which may take a minute or so.
+9. Following the instructions to view your JupyterLab session via a web browser.
+10. Do your science. My typical workflow is to use `dask-jobqueue` to request and access resources to do the "heavy-lifting" in my notebooks (e.g. reducing a large dataset down to a 2D field to plot). The key step to getting `dask-jobqueue` running on Gadi is the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `run_dask-jobqueue_Gadi.ipynb`.  
 	
