@@ -2,6 +2,7 @@
 Users will need to be able to log in to Gadi and request resources under a project. New users can sign up here https://my.nci.org.au/mancini/signup/0, but they will need to either join an existing project or propose a new project to be able to access NCI resources.
 Users will also need to have a github account.
 
+## Steps
 1. Log in to Gadi.
 2. If you don't have conda installed or access to conda (`which conda`), please install it:  
 	```
@@ -11,8 +12,8 @@ Users will also need to have a github account.
 	```  
 	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend using a persistent location, e.g. `/g/data/v14/<username>/apps/` (you'll have to create the `apps` directory first).
 3. Clone this repo to a location of your choice: go to the desired location (e.g. `/g/data/v14/<username>`) and enter `git clone git@github.com:csiro-dcfp/pangeo_Gadi.git`.
-4. If you don't already have a pangeo conda environment, create one: `conda env create -f pangeo.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name pangeo -f pangeo.yml`.
-5. Activate your new `pangeo` environment and install/enable the following jupyter labextensions (you'll only need to do this once):
+4. If you don't already have a pangeo conda environment, create one: `conda env create -f pangeo.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name pangeo_new -f pangeo.yml`.
+5. Activate your new `pangeo` environment and install/enable the following Jupyter labextensions (you'll only need to do this once):
 	```
 	conda activate pangeo
 	
@@ -31,7 +32,7 @@ Users will also need to have a github account.
 	```
 	and follow the prompts.
 7. At this point, you're ready to submit a job to run your JupyterLab and python instances. Once this job is running and you've accessed JupyterLab via your web browser (see below) you'll be able to request additional resources as a dask cluster (using `dask-jobqueue`). We can submit a job to run our JupyterLab instance using `start_jupyter.sh` but it will require a little editing first.
-	1. Edit the PBS header information (the `#PBS` lines) to reflect your project, required resources, etc. Remember these are just the resources needed for Python and JupyterLab. For interactive science work, I usually request few resources for a long time, and then do any heavy compute task(s) on dask clusters that are spun up specifically for the task(s).
+	1. Edit the PBS header information (the `#PBS` lines) to reflect your project, required resources, etc. Remember these are just the resources needed for Python and JupyterLab. For interactive science work, I usually request few resources for a long time, and then do any heavy compute task(s) on dask clusters that are spun up from within JupyterLab specifically for the task(s).
 	2. If you called you conda environment anything other than "pangeo", you'll need to edit the `conda activate pangeo` line accordingly at the beginning of the script.
 	3. Change the `LOG_DIR` path where log files are output to.
 	4. You may wish to edit some environment variables, e.g. add a directory to your `PYTHONPATH`.
