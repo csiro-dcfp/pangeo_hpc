@@ -11,7 +11,7 @@ Users will also need to have a github account.
 	./Miniconda3-latest-Linux-x86_64.sh
 	```  
 	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend using a persistent location, e.g. `/g/data/v14/<username>/apps/` (you'll have to create the `apps` directory first).
-3. Clone this repo to a location of your choice: go to the desired location (e.g. `/g/data/v14/<username>`) and run `git clone git@github.com:csiro-dcfp/pangeo_Gadi.git`.
+3. Clone this repo to a location of your choice: go to the desired location (e.g. `/g/data/v14/<username>`) and run `git clone https://github.com/csiro-dcfp/pangeo_Gadi.git`.
 4. If you don't already have a pangeo conda environment, create one: `conda env create -f pangeo.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name pangeo_new -f pangeo.yml`.
 5. Activate your new `pangeo` environment and install/enable the following Jupyter labextensions (you'll only need to do this once):
 	```
