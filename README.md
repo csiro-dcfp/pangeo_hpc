@@ -36,6 +36,7 @@ Users will also need to have a github account.
 	2. If you called you conda environment anything other than "pangeo", you'll need to edit the `conda activate pangeo` line accordingly at the beginning of the script.
 	3. Change the `LOG_DIR` path where log files are output to.
 	4. You may wish to edit some environment variables, e.g. add a directory to your `PYTHONPATH`.
+	
 	For convenience, I've written a little function for handling the submission of `start_jupyter.sh` and parsing instructions from the output file. You can put this in your `.bashrc` or `.bash_profile`:
 	```
 	function pangeo {
