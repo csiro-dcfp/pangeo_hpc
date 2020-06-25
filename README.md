@@ -1,5 +1,5 @@
 # Scripts and advice for running Pangeo with `dask-jobqueue` on NCI Gadi
-Users will need to be able to log in to Gadi and request resources under a project. New users can sign up here https://my.nci.org.au/mancini/signup/0, but they will need to either join an existing project or propose a new project to be able to access NCI resources.
+Users will need to be able to log in to Gadi and request resources under a project. New users can sign up here https://my.nci.org.au/mancini/signup/0, but they will need to either join an existing project or propose a new project to be able to access NCI resources. Existing users can check their projects here https://my.nci.org.au/mancini/.
 Users will also need to have a github account.
 
 ## Getting set up:
