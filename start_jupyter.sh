@@ -2,7 +2,7 @@
 
 #PBS -P v14
 #PBS -q normal
-#PBS -l walltime=02:00:00
+#PBS -l walltime=01:00:00
 #PBS -l mem=4gb
 #PBS -l ncpus=1
 #PBS -l wd
