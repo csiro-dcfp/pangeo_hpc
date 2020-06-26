@@ -2,7 +2,7 @@
 
 #PBS -P v14
 #PBS -q normal
-#PBS -l walltime=01:00:00
+#PBS -l walltime=00:30:00
 #PBS -l mem=4gb
 #PBS -l ncpus=1
 #PBS -l wd
@@ -31,7 +31,8 @@ rm -f $INSTRUCTIONSFILE
 # Start the notebook -----
 echo -e "Starting jupyter notebook..." \
 > $INSTRUCTIONSFILE
-jupyter lab --no-browser --ip=$HOST --notebook-dir=$NOTEBOOK_DIR \
+JPORT=$(shuf -n 1 -i 8301-8400) # As in NCI pangeo module
+jupyter lab --no-browser --ip=$HOST --port=${JPORT} --notebook-dir=$NOTEBOOK_DIR \
 >& $LOGFILE &
 
 # Wait for notebook to start -----

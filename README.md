@@ -40,7 +40,7 @@ Users will also need to have a github account.
 	For convenience, I've written a little function for handling the submission of `start_jupyter.sh` and parsing instructions from the output file. This receives some of the key job specifications--walltime, memory, number of cpus, and the notebook directory--as optional inputs so you don't have to edit `start_jupyter.sh` everytime you want to change any of these. You can put this function in your `.bashrc` or `.bash_profile`:
 	```
 	function pangeo {
-		WALLTIME=${1:-"01:00:00"}
+		WALLTIME=${1:-"00:30:00"}
         	MEM=${2:-"4GB"}
         	NCPUS=${3:-"1"}
 		NOTEBOOK_DIR=${4:-`pwd`}
