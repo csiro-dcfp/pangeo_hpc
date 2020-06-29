@@ -66,6 +66,7 @@ dependencies:
   - jupyter_core=4.6.3=py37hc8dfbb8_1
   - jupyterlab=2.1.4=py_1
   - jupyterlab_server=1.1.5=py_0
+  - jupytext=1.5.0=pyh9f0ad1d_1
   - kiwisolver=1.2.0=py37h99015e2_0
   - krb5=1.17.1=h2fd8d38_0
   - ld_impl_linux-64=2.34=h53a641e_5
@@ -161,6 +162,7 @@ dependencies:
   - terminado=0.8.3=py37hc8dfbb8_1
   - testpath=0.4.4=py_0
   - tk=8.6.10=hed695b0_0
+  - toml=0.10.1=pyh9f0ad1d_0
   - toolz=0.10.0=py_0
   - tornado=6.0.4=py37h8f50634_1
   - traitlets=4.3.3=py37hc8dfbb8_1
@@ -182,4 +184,5 @@ dependencies:
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h516909a_1006
   - zstd=1.4.4=h6597ccf_3
+prefix: /g/data/v14/ds0092/software/miniconda3/envs/pangeo
 

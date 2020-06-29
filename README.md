@@ -24,9 +24,14 @@ Users will also need to have a github account.
 	jupyter serverextension enable dask_labextension
 
 	jupyter labextension install @jupyter-widgets/jupyterlab-manager
-	jupyter serverextension enable --py nbserverproxy
 	jupyter nbextension enable --py widgetsnbextension --sys-prefix
+
+	jupyter serverextension enable --py nbserverproxy
+
+	jupyter labextension install jupyterlab-jupytext
+	jupyter nbextension enable --py jupytext
 	```
+	Note, `jupytext` is a handy little tool for managing versions of your Jupyter notebooks in other languages (https://github.com/mwouts/jupytext).
 6. Configure your Jupyter password: 
 	```
 	jupyter notebook --generate-config
