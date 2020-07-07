@@ -1,10 +1,10 @@
 #!/bin/bash -l
 
-#PBS -P v19
+#PBS -P v14
 #PBS -q normal
-#PBS -l walltime=00:30:00
-#PBS -l mem=4gb
-#PBS -l ncpus=1
+#PBS -l walltime=02:00:00
+#PBS -l mem=16gb
+#PBS -l ncpus=4
 #PBS -l wd
 #PBS -l storage=gdata/v14+scratch/v14
 #PBS -j oe
