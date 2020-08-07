@@ -5,6 +5,7 @@
 #PBS -l walltime=02:00:00
 #PBS -l mem=16gb
 #PBS -l ncpus=4
+#PBS -l jobfs=100GB
 #PBS -l wd
 #PBS -l storage=gdata/v14+scratch/v14
 #PBS -j oe

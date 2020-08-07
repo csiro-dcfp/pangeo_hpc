@@ -19,7 +19,6 @@ Users will also need to have a github account.
 	```
 	conda activate pangeo
 	
-	conda install -c conda-forge dask-labextension
 	jupyter labextension install dask-labextension
 	jupyter serverextension enable dask_labextension
 
