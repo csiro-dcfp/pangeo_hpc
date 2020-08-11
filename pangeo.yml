@@ -76,6 +76,7 @@ dependencies:
   - jupyter_core=4.6.3=py38h32f6830_1
   - jupyterlab=2.2.2=py_0
   - jupyterlab_server=1.2.0=py_0
+  - jupytext=1.5.2=pyh9f0ad1d_0
   - kealib=1.4.13=h33137a7_1
   - kiwisolver=1.2.0=py38hbf85e49_0
   - krb5=1.17.1=hfafb76e_2
@@ -188,6 +189,7 @@ dependencies:
   - testpath=0.4.4=py_0
   - tiledb=2.0.8=h3effe38_0
   - tk=8.6.10=hed695b0_0
+  - toml=0.10.1=pyh9f0ad1d_0
   - toolz=0.10.0=py_0
   - tornado=6.0.4=py38h1e0a361_1
   - traitlets=4.3.3=py38h32f6830_1
@@ -197,6 +199,7 @@ dependencies:
   - wcwidth=0.2.5=pyh9f0ad1d_1
   - webencodings=0.5.1=py_1
   - wheel=0.34.2=py_1
+  - widgetsnbextension=3.5.1=py38h32f6830_1
   - xarray=0.16.0=py_0
   - xerces-c=3.2.3=hfe33f54_1
   - xesmf=0.3.0=py_0
