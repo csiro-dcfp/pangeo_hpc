@@ -41,21 +41,26 @@ dependencies:
   - decorator=4.4.2=py_0
   - defusedxml=0.6.0=py_0
   - distributed=2.22.0=py38h32f6830_0
+  - docrep=0.2.7=py_0
   - entrypoints=0.3=py38h32f6830_1001
   - esmf=8.0.1=mpi_mpich_h213fab7_100
   - esmpy=8.0.1=mpi_mpich_py38h08b7006_100
   - expat=2.2.9=he1b5a44_2
   - fasteners=0.14.1=py_3
+  - ffmpeg=4.3.1=h167e202_0
   - fontconfig=2.13.1=h1056068_1002
   - freetype=2.10.2=he06d7ca_0
   - freexl=1.0.5=h516909a_1002
   - fsspec=0.8.0=py_0
+  - future=0.18.2=py38h32f6830_1
   - gdal=3.1.2=py38hb61cb63_1
   - geos=3.8.1=he1b5a44_0
   - geotiff=1.6.0=ha04d9d0_1
   - gettext=0.19.8.1=hc5be6a0_1002
   - giflib=5.2.1=h516909a_2
   - glib=2.65.0=h6f030ca_0
+  - gmp=6.2.0=he1b5a44_2
+  - gnutls=3.6.13=h79a8f9a_0
   - hdf4=4.2.13=hf30be14_1003
   - hdf5=1.10.6=mpi_mpich_ha7d0aea_1
   - heapdict=1.0.1=py_0
@@ -82,6 +87,7 @@ dependencies:
   - kealib=1.4.13=h33137a7_1
   - kiwisolver=1.2.0=py38hbf85e49_0
   - krb5=1.17.1=hfafb76e_2
+  - lame=3.100=h14c3975_1001
   - lcms2=2.11=hbd6801e_0
   - ld_impl_linux-64=2.34=hc38a660_9
   - libblas=3.8.0=17_openblas
@@ -132,12 +138,14 @@ dependencies:
   - nbserverproxy=0.8.8=py_1000
   - ncurses=6.2=he1b5a44_1
   - netcdf-fortran=4.5.3=mpi_mpich_h3923e1a_0
+  - nettle=3.4.1=h1bed415_1002
   - nodejs=14.7.0=h568c755_0
   - notebook=6.1.1=py38h32f6830_0
   - numba=0.50.1=py38hcb8c335_1
   - numcodecs=0.6.4=py38he1b5a44_0
   - numpy=1.19.1=py38h8854b6b_0
   - olefile=0.46=py_0
+  - openh264=2.1.1=h8b12597_0
   - openjpeg=2.3.1=h981e76c_3
   - openssl=1.1.1g=h516909a_1
   - owslib=0.20.0=py_0
@@ -145,7 +153,7 @@ dependencies:
   - pandas=1.1.0=py38h950e882_0
   - pandoc=2.10.1=h516909a_0
   - pandocfilters=1.4.2=py_1
-  - parso=0.8.0=pyh9f0ad1d_0
+  - parso=0.5.2=py_0
   - partd=1.1.0=py_0
   - pcre=8.44=he1b5a44_0
   - pexpect=4.8.0=py38h32f6830_1
@@ -208,6 +216,7 @@ dependencies:
   - webencodings=0.5.1=py_1
   - wheel=0.34.2=py_1
   - widgetsnbextension=3.5.1=py38h32f6830_1
+  - x264=1!152.20180806=h14c3975_0
   - xarray=0.16.0=py_0
   - xerces-c=3.2.3=hfe33f54_1
   - xesmf=0.3.0=py_0
@@ -222,6 +231,7 @@ dependencies:
   - xorg-renderproto=0.11.1=h14c3975_1002
   - xorg-xextproto=7.3.0=h14c3975_1002
   - xorg-xproto=7.0.31=h14c3975_1007
+  - xrft=0.2.0=py_0
   - xskillscore=0.0.16=py_0
   - xz=5.2.5=h516909a_1
   - yaml=0.2.5=h516909a_0
@@ -232,5 +242,3 @@ dependencies:
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h516909a_1006
   - zstd=1.4.5=h6597ccf_2
-prefix: /g/data/v14/ds0092/software/miniconda3/envs/pangeo
-
