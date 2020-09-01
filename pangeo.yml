@@ -220,6 +220,7 @@ dependencies:
   - xarray=0.16.0=py_0
   - xerces-c=3.2.3=hfe33f54_1
   - xesmf=0.3.0=py_0
+  - xhistogram=0.1.1=py_0
   - xorg-kbproto=1.0.7=h14c3975_1002
   - xorg-libice=1.0.10=h516909a_0
   - xorg-libsm=1.2.3=h84519dc_1000
