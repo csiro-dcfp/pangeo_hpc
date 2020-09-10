@@ -68,6 +68,7 @@ dependencies:
   - idna=2.10=pyh9f0ad1d_0
   - importlib-metadata=1.7.0=py38h32f6830_0
   - importlib_metadata=1.7.0=0
+  - iniconfig=1.0.1=pyh9f0ad1d_0
   - ipykernel=5.3.4=py38h23f93f0_0
   - ipython=7.17.0=py38h1cdfbd6_0
   - ipython_genutils=0.2.0=py_1
@@ -128,6 +129,7 @@ dependencies:
   - matplotlib-base=3.3.0=py38h91b0d89_1
   - mistune=0.8.4=py38h1e0a361_1001
   - monotonic=1.5=py_0
+  - more-itertools=8.5.0=py_0
   - mpi=1.0=mpich
   - mpi4py=3.0.3=py38h4a80816_1
   - mpich=3.3.2=hc856adb_0
@@ -161,6 +163,7 @@ dependencies:
   - pillow=7.2.0=py38h9776b28_1
   - pip=20.2.1=py_0
   - pixman=0.38.0=h516909a_1003
+  - pluggy=0.13.1=py38h32f6830_2
   - poppler=0.89.0=h4190859_1
   - poppler-data=0.4.9=1
   - postgresql=12.3=h8573dbc_0
@@ -171,6 +174,7 @@ dependencies:
   - psutil=5.7.2=py38h1e0a361_0
   - pthread-stubs=0.4=h14c3975_1001
   - ptyprocess=0.6.0=py_1001
+  - py=1.9.0=pyh9f0ad1d_0
   - pycparser=2.20=pyh9f0ad1d_2
   - pyepsg=0.4.0=py_0
   - pygments=2.6.1=py_0
@@ -181,6 +185,7 @@ dependencies:
   - pyshp=2.1.0=py_0
   - pysocks=1.7.1=py38h32f6830_1
   - pyspharm=1.0.9=py38h522b421_1005
+  - pytest=6.0.1=py38h32f6830_0
   - python=3.8.5=h4d41432_2_cpython
   - python-dateutil=2.8.1=py_0
   - python_abi=3.8=1_cp38
