@@ -216,6 +216,7 @@ dependencies:
   - webencodings=0.5.1=py_1
   - wheel=0.34.2=py_1
   - widgetsnbextension=3.5.1=py38h32f6830_1
+  - windspharm=1.7.0=py38h32f6830_1002
   - x264=1!152.20180806=h14c3975_0
   - xarray=0.16.0=py_0
   - xerces-c=3.2.3=hfe33f54_1
