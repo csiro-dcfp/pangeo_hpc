@@ -20,6 +20,8 @@ __pycache__
 ._*
 
 # Standard error output files
+**.OU
+**.out
 **.err
 
 # excel files

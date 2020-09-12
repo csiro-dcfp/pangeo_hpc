@@ -1,0 +1,13 @@
+Starting jupyter notebook...
+
+Run the following command on your local computer:
+  ssh -N -L 8391:c364:8391 squ027@pearcey.hpc.csiro.au
+Then open a browser and go to:
+  http://localhost:8391
+The Jupyter web interface will ask you for your password.
+
+To get the dashboard working, use the dask labextension and navigate to
+  http://localhost:8391/proxy/<dashboard-port>
+
+Use Control-C to shut down this job...
+
