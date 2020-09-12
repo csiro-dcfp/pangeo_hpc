@@ -10,12 +10,14 @@
 #PBS -l jobfs=100GB
 #PBS -l wd
 #PBS -j oe
-#PBS -o .out/jupyter.%J.out 
+#PBS -o /dev/null
 
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
+    RUN_SCRIPT_DIR=$2
 fi
 LOG_DIR=/g/data/${PROJECT}/${USER}/tmp/logs
 HPC_ADDRESS=gadi.nci.org.au
 
-./start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS}
+echo "`dirname \"$0\"`"
+${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS}
