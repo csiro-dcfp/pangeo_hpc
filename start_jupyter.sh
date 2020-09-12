@@ -1,5 +1,7 @@
 #!/bin/bash -l
 
+# Adapted from code written by Paul Branson
+
 NOTEBOOK_DIR=$1
 LOG_DIR=$2
 HPC_ADDRESS=$3
