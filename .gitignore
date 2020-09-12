@@ -2,6 +2,7 @@
 log
 .config
 **.nml
+jupyter_instructions.txt
 
 # dask lock files
 **.dirlock
