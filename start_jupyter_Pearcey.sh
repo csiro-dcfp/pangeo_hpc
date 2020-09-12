@@ -1,9 +1,9 @@
 #!/bin/bash -l
 
-#SBATCH -time=02:00:00
-#SBATCH -mem-per-cpu=16gb
-#SBATCH -cpus-per-task=4
-#SBATCH -output=$LOG_DIR/jupyter-%J.out 
+#SBATCH --time=02:00:00
+#SBATCH --mem-per-cpu=16gb
+#SBATCH --cpus-per-task=4
+#SBATCH --output=$LOG_DIR/jupyter-%J.out 
 
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
