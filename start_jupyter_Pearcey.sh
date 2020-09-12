@@ -12,4 +12,6 @@ fi
 LOG_DIR=/scratch1/${USER}/tmp/logs
 HPC_ADDRESS=pearcey.hpc.csiro.au
 
+conda activate pangeo
+
 ${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS}

@@ -49,4 +49,4 @@ elif [[ "$SYSTEM" == "pearcey" ]]; then
 }'
 fi
 
-echo "$PANGEO_FUNCTION" > test.txt
+echo "$PANGEO_FUNCTION" >> ~/.bashrc 

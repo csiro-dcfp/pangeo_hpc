@@ -4,11 +4,6 @@ NOTEBOOK_DIR=$1
 LOG_DIR=$2
 HPC_ADDRESS=$3
 
-# TO BE EDITED BY THE USER (MAYBE) 
-# ================================
-conda activate pangeo
-# ================================
-
 HOST=$(hostname)
 mkdir -p $LOG_DIR
 LOGFILE=$LOG_DIR/pangeo_jupyter_log.$(date +%Y%m%dT%H%M%S)
