@@ -21,9 +21,9 @@ if [[ "$SYSTEM" == "gadi" ]]; then
 
     jobid=$(qsub -l walltime=${WALLTIME} -l mem=${MEM} -l ncpus=${NCPUS} -P ${PROJECT} -v "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Gadi.sh)
     while [ ! -f jupyter_instructions.txt ]; do
-        sleep 5
+        sleep 1
     done
-    tail -f jupyter_instructions.txt
+    tail -f -n 50 jupyter_instructions.txt
 
     echo "Closing ${jobid}"
     qdel ${jobid}
@@ -40,9 +40,9 @@ elif [[ "$SYSTEM" == "pearcey" ]]; then
 
     jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Pearcey.sh)
     while [ ! -f jupyter_instructions.txt ]; do
-        sleep 5
+        sleep 1
     done
-    tail -f jupyter_instructions.txt
+    tail -f -n 50 jupyter_instructions.txt
 
     echo "Closing ${jobid}"
     qdel ${jobid}

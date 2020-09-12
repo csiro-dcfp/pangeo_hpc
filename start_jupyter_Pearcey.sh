@@ -3,7 +3,7 @@
 #SBATCH --time=02:00:00
 #SBATCH --mem-per-cpu=16gb
 #SBATCH --cpus-per-task=4
-##SBATCH --output=/dev/null 
+#SBATCH --output=/dev/null 
 
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
