@@ -1,5 +1,5 @@
 # Scripts and advice for running Pangeo with `dask-jobqueue` on NCI Gadi and CSIRO Pearcey
-(Note that the recommended approach for using Pangeo on Gadi is outlined here: https://nci-data-training.readthedocs.io/en/latest/_notebook/prep/pangeo.html. These scripts and instructions describe an alternative approach where users can manage their own conda environment and scale clusters using `dask-jobqueue`)
+(Note that the NCI-recommended approach for using Pangeo on Gadi is outlined here: https://nci-data-training.readthedocs.io/en/latest/_notebook/prep/pangeo.html. These scripts and instructions describe an alternative approach where users can manage their own conda environment and scale clusters using `dask-jobqueue`)
 
 ## Prerequisites
 Users will need to be able to log in to their system of interest. To use Gadi, users will need to be able to request resources under a project. New users can sign up here https://my.nci.org.au/mancini/signup/0, but they will need to either join an existing project or propose a new project to be able to access NCI resources. Existing users can check their projects here https://my.nci.org.au/mancini/.
