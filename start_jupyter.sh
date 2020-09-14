@@ -48,8 +48,9 @@ Then open a browser and go to:
   http://localhost:$PORT
 The Jupyter web interface will ask you for your password.
 
-To get the dashboard working, use the dask labextension and navigate to
+To view the dask dashboard, enter the following into the dask labextension / new browser:
   http://localhost:$PORT/proxy/<dashboard-port>/status
+where <dashboard-port> is the port serving your dashboard (8787 by default)
 
 Use Control-C to shut down this job...
 "
