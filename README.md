@@ -12,8 +12,8 @@ New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 
 ## Getting set up:
 1. Log in 
-	> Gadi: `ssh -Y <username>@gadi.nci.org.au`\ 
-	> Zeus: `ssh -Y <username>@zeus.pawsey.org.au`\ 
+	> Gadi: `ssh -Y <username>@gadi.nci.org.au`\
+	> Zeus: `ssh -Y <username>@zeus.pawsey.org.au`\
 	> Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`
 
 2. If you don't have conda installed or access to conda (try `which conda`), install it:  
