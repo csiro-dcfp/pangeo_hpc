@@ -1,4 +1,4 @@
-# Scripts and advice for running Pangeo with `dask-jobqueue` on NCI Gadi and CSIRO Pearcey
+# Scripts and advice for running Pangeo with `dask-jobqueue` on NCI's Gadi, Pawsey's Zeus and CSIRO's Pearcey
 (Note that the NCI-recommended approach for using Pangeo on Gadi is outlined here: https://nci-data-training.readthedocs.io/en/latest/_notebook/prep/pangeo.html. The scripts and instructions in this repo describe an alternative approach where users can manage their own conda environment and scale clusters using `dask-jobqueue`)
 
 ## Prerequisites
