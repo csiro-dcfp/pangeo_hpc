@@ -6,12 +6,10 @@ Users will need to be able to log in to their system of interest. To use Gadi an
 
 New users to Gadi can sign up [here](https://my.nci.org.au/mancini/signup/0), but they will need to either join an existing project or propose a new project to be able to access NCI resources. Existing users can check their projects [here](https://my.nci.org.au/mancini/).
 
-New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/)
-
-Users will also need to have a github account.
+New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 
 ## Getting set up:
-1. Log in (Gadi: `ssh -Y <username>@gadi.nci.org.au` or Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`)
+1. Log in (Gadi: `ssh -Y <username>@gadi.nci.org.au`, Zeus: `ssh -Y <username>@zeus.pawsey.org.au` or Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`)
 
 2. If you don't have conda installed or access to conda (`which conda`), install it:  
 	```
@@ -19,7 +17,7 @@ Users will also need to have a github account.
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
 	./Miniconda3-latest-Linux-x86_64.sh
 	```  
-	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend using a persistent location, e.g. `/g/data/` on Gadi, Bowen storage on Pearcey.
+	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend using a persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
 	
 3. Clone this repo to a location of your choice: go to the desired location and run `git clone https://github.com/csiro-dcfp/pangeo_hpc.git`.
 
@@ -51,20 +49,23 @@ Users will also need to have a github account.
 	```
 	and follow the prompts.
 	
-7. At this point, you're ready to submit a job to run your JupyterLab and python instances. Once this job is running and you've accessed JupyterLab via your web browser (see below) you'll be able to request additional resources as a dask cluster (using `dask-jobqueue`). We can submit a job to run our JupyterLab instance using the relevant `start_jupyter_<system>.sh` script but it may require a little editing first:
+7. At this point, you're ready to submit a job to run your JupyterLab and Python instances. Once this job is running and you've accessed JupyterLab via your web browser (see below) you'll be able to request additional resources as a dask cluster (using `dask-jobqueue`). We can submit a job to run our JupyterLab instance using the relevant `start_jupyter_<system>.sh` script but it may require a little editing first:
 
 	1. Edit the PBS/SLURM header information (the `#PBS`/`#SLURM` lines) to reflect your project (if relevant), required resources, etc. Remember these do not need to represent the total resources you require for the job you have planned because you will be able to request additional resources from within JupyterLab using `dask-jobqueue`. For interactive science work, I usually request few resources for a relatively long time, and then do compute-heavy reduction task(s) on shorter-term `dask-jobqueue` clusters. With this type of workflow, the resources you request in `start_jupyter_<system>.sh` need only reflect what is needed to handle the reduced data.
 	
-	2. If you called your conda environment anything other than "pangeo", you'll need to edit the `conda activate pangeo` line accordingly at the beginning of the script.
+	2. If you called your conda environment anything other than "pangeo", you'll need to edit the `PANGEO_ENVIRONMENT` variable accordingly at the beginning of the script.
 
 	You could now go ahead and submit your `start_jupyter_<system>.sh` script to the queue. However, for convenience I've also written a simple function for handling the submission of `start_jupyter_<system>.sh` and parsing instructions from the output file. This function receives some of the key job specifications as optional inputs so you don't have to edit the header on `start_jupyter_<system>.sh` everytime you want to change any of these. You can append this function to your `.bashrc` by running `./instantiate_pangeo_function.sh` (only run this **once**). The `pangeo` function signature is:
 	> Gadi: `pangeo walltime(02:00:00) ncpus(4) mem(16GB) project($PROJECT) notebook_directory(~)`\
+	> Zeus: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(16GB) account($PAWSEY_PROJECT) notebook_directory(~)`\
 	> Pearcey: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(16GB) notebook_directory(~)`
 	
-	where the defaults given in brackets
+	where the defaults are given in brackets
 
 8. Run the `pangeo` function or submit `start_jupyter_<system>.sh` to the queue. For the former, instructions for setting up port forwarding to view your JupyterLab session will be printed to your screen. For the latter, you'll have to parse them from the `jupyter_instructions.txt` file that will appear in the current directory. In both cases, the instructions will only appear once your jobs leaves the queue which may take a minute or so.
 
 9. Follow the instructions to access your JupyterLab session via a web browser.
 
-10. Do your science. As mentioned above, my typical workflow is to use `dask-jobqueue` to request and access resources for the "heavy-lifting" in my notebooks (e.g. reducing a large dataset down to a 2D field to plot). Examples of setting up a `dask-jobqueue` cluster are given in the [notebooks](https://github.com/csiro-dcfp/pangeo_hpc/tree/master/notebooks) directory of this repo. Note that getting `dask-jobqueue` running on Gadi requires the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `notebooks/run_dask-jobqueue_Gadi.ipynb`.  
+10. Do your science. As mentioned above, my typical workflow is to use `dask-jobqueue` to request and access resources for the "heavy-lifting" in my notebooks (e.g. reducing a large dataset down to a 2D field to plot). Examples of setting up a `dask-jobqueue` cluster are given in the [notebooks](https://github.com/csiro-dcfp/pangeo_hpc/tree/master/notebooks) directory of this repo. 
+
+	Note that getting `dask-jobqueue` running on Gadi requires the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `notebooks/run_dask-jobqueue_Gadi.ipynb`.  
