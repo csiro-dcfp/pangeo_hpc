@@ -5,6 +5,10 @@
 NOTEBOOK_DIR=$1
 LOG_DIR=$2
 HPC_ADDRESS=$3
+PANGEO_ENVIRONMENT=$4
+
+conda deactivate
+conda activate ${PANGEO_ENVIRONMENT}
 
 HOST=$(hostname)
 mkdir -p $LOG_DIR
