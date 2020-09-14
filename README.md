@@ -11,7 +11,7 @@ New users to Gadi can sign up [here](https://my.nci.org.au/mancini/signup/0), bu
 New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 
 ## Getting set up:
-1. Log in 
+1. Log in to your system of choice:
 	> Gadi: `ssh -Y <username>@gadi.nci.org.au`\
 	> Zeus: `ssh -Y <username>@zeus.pawsey.org.au`\
 	> Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`
