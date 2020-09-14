@@ -2,7 +2,13 @@
 (Note that the NCI-recommended approach for using Pangeo on Gadi is outlined here: https://nci-data-training.readthedocs.io/en/latest/_notebook/prep/pangeo.html. The scripts and instructions in this repo describe an alternative approach where users can manage their own conda environment and scale clusters using `dask-jobqueue`)
 
 ## Prerequisites
-Users will need to be able to log in to their system of interest. To use Gadi, users will need to be able to request resources under a project. New users can sign up [here](https://my.nci.org.au/mancini/signup/0), but they will need to either join an existing project or propose a new project to be able to access NCI resources. Existing users can check their projects [here](https://my.nci.org.au/mancini/). Users will also need to have a github account.
+Users will need to be able to log in to their system of interest. To use Gadi and Pawsey, users will need to be able to request resources under a project. 
+
+New users to Gadi can sign up [here](https://my.nci.org.au/mancini/signup/0), but they will need to either join an existing project or propose a new project to be able to access NCI resources. Existing users can check their projects [here](https://my.nci.org.au/mancini/).
+
+New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/)
+
+Users will also need to have a github account.
 
 ## Getting set up:
 1. Log in (Gadi: `ssh -Y <username>@gadi.nci.org.au` or Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`)
