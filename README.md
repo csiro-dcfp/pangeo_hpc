@@ -13,7 +13,7 @@ Users will need to be able to log in to their system of interest. To use Gadi, u
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
 	./Miniconda3-latest-Linux-x86_64.sh
 	```  
-	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend using a persistent location, e.g. `/g/data/v14/<username>/apps/` on Gadi or Bowen storage on Pearcey.
+	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend using a persistent location, e.g. `/g/data/` on Gadi, Bowen storage on Pearcey.
 	
 3. Clone this repo to a location of your choice: go to the desired location and run `git clone https://github.com/csiro-dcfp/pangeo_hpc.git`.
 
