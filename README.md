@@ -1,4 +1,6 @@
 # Scripts and advice for running Pangeo with `dask-jobqueue` on NCI's Gadi, Pawsey's Zeus and CSIRO's Pearcey
+These are the scripts that I (Dougie) use. They may be useful to you.
+
 (Note that the NCI-recommended approach for using Pangeo on Gadi is outlined here: https://nci-data-training.readthedocs.io/en/latest/_notebook/prep/pangeo.html. The scripts and instructions in this repo describe an alternative approach where users can manage their own conda environment and scale clusters using `dask-jobqueue`)
 
 ## Prerequisites
@@ -9,17 +11,20 @@ New users to Gadi can sign up [here](https://my.nci.org.au/mancini/signup/0), bu
 New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 
 ## Getting set up:
-1. Log in (Gadi: `ssh -Y <username>@gadi.nci.org.au`, Zeus: `ssh -Y <username>@zeus.pawsey.org.au` or Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`)
+1. Log in 
+	> Gadi: `ssh -Y <username>@gadi.nci.org.au`\ 
+	> Zeus: `ssh -Y <username>@zeus.pawsey.org.au`\ 
+	> Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`
 
-2. If you don't have conda installed or access to conda (`which conda`), install it:  
+2. If you don't have conda installed or access to conda (try `which conda`), install it:  
 	```
 	wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
 	./Miniconda3-latest-Linux-x86_64.sh
 	```  
-	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend using a persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
+	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend instead using a persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
 	
-3. Clone this repo to a location of your choice: go to the desired location and run `git clone https://github.com/csiro-dcfp/pangeo_hpc.git`.
+3. Clone this repo to a location of your choice: go to the desired location and run `git clone https://github.com/csiro-dcfp/pangeo_hpc.git` (or `git clone git@github.com:csiro-dcfp/pangeo_hpc.git` if using ssh keys).
 
 4. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one: `conda env create -f pangeo_environment.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name <different_name> -f pangeo_environment.yml`.
 
@@ -66,6 +71,6 @@ New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 
 9. Follow the instructions to access your JupyterLab session via a web browser.
 
-10. Do your science. As mentioned above, my typical workflow is to use `dask-jobqueue` to request and access resources for the "heavy-lifting" in my notebooks (e.g. reducing a large dataset down to a 2D field to plot). Examples of setting up a `dask-jobqueue` cluster are given in the [notebooks](https://github.com/csiro-dcfp/pangeo_hpc/tree/master/notebooks) directory of this repo. 
+10. Do your science. As mentioned above, my typical workflow is to use `dask-jobqueue` to request and access resources for the "heavy-lifting" in my notebooks (e.g. reducing a large dataset down to a 1D or 2D field to plot). Examples of setting up a `dask-jobqueue` cluster are given in the [notebooks](https://github.com/csiro-dcfp/pangeo_hpc/tree/master/notebooks) directory of this repo. 
 
 	Note that getting `dask-jobqueue` running on Gadi requires the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `notebooks/run_dask-jobqueue_Gadi.ipynb`.  
