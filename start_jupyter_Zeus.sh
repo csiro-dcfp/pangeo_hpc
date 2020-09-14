@@ -7,7 +7,18 @@
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=4G
 #SBATCH --cpus-per-task=4
-##SBATCH --output=/dev/null 
+#SBATCH --output=/dev/null 
+
+# ====================================
+# Submit a job running Jupyter on Zeus
+#
+#    USAGE: qsub --export NOTEBOOK_DIR=<directory to start notebook in> \
+#                --export RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
+#                start_jupyter_Zeus.sh
+#
+#    Dougie Squire
+#    19/08/2020
+# ====================================
 
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1

@@ -1,6 +1,16 @@
 #!/bin/bash -l
 
-# Adapted from code written by Paul Branson
+# ====================================
+# Start a jupyter instance and print port-forwarding instructions
+#
+#    USAGE: ./start_jupyter.sh <directory to start notebook in> \
+#                              <directory to log output to> \
+#                              <address of system being run on> \
+#                              <name of conda environment containing jupyter etc>
+#
+#    Dougie Squire, adapted from code by Paul Branson
+#    19/08/2020
+# ====================================
 
 NOTEBOOK_DIR=$1
 LOG_DIR=$2

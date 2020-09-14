@@ -6,6 +6,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --output=/dev/null 
 
+# ====================================
+# Submit a job running Jupyter on Pearcey
+#
+#    USAGE: qsub --export NOTEBOOK_DIR=<directory to start notebook in> \
+#                --export RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
+#                start_jupyter_Pearcey.sh
+#
+#    Dougie Squire
+#    19/08/2020
+# ====================================
+
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
     RUN_SCRIPT_DIR=$2

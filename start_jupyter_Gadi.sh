@@ -12,6 +12,17 @@
 #PBS -j oe
 #PBS -o /dev/null
 
+# ====================================
+# Submit a job running Jupyter on Gadi
+#
+#    USAGE: qsub -v NOTEBOOK_DIR=<directory to start notebook in> \
+#                -v RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
+#		 start_jupyter_Gadi.sh
+#
+#    Dougie Squire
+#    19/08/2020
+# ====================================
+
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
     RUN_SCRIPT_DIR=$2

@@ -1,5 +1,14 @@
 #!/bin/bash -l
 
+# ====================================
+# Append the pangeo function to a user's .bashrc
+#
+#    USAGE: ./instantiate_pangeo_function
+#
+#    Dougie Squire
+#    20/08/2020
+# ====================================
+
 if [[ "$HOSTNAME" == *"gadi"* ]]; then
     SYSTEM=gadi
 elif [[ "$HOSTNAME" == *"pearcey"* ]]; then
