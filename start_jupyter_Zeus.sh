@@ -14,7 +14,7 @@ if [ ! $# -eq 0 ]; then
     RUN_SCRIPT_DIR=$2
 fi
 
-# USER TO EDIT (if appropriate)
+# USER TO EDIT (optional)
 # ----------------------------
 PANGEO_ENVIRONMENT=pangeo
 LOG_DIR=/scratch/${PAWSEY_PROJECT}/${USER}/tmp/logs
