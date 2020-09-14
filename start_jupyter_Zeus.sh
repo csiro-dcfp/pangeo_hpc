@@ -18,7 +18,8 @@ fi
 # ----------------------------
 PANGEO_ENVIRONMENT=pangeo
 LOG_DIR=/scratch/${PAWSEY_PROJECT}/${USER}/tmp/logs
-HPC_ADDRESS=zeus.pawsey.org.au
 # ----------------------------
+
+HPC_ADDRESS=zeus.pawsey.org.au
 
 ${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENVIRONMENT}

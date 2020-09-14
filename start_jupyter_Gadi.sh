@@ -21,7 +21,8 @@ fi
 # ----------------------------
 PANGEO_ENVIRONMENT=pangeo
 LOG_DIR=/g/data/${PROJECT}/${USER}/tmp/logs
-HPC_ADDRESS=gadi.nci.org.au
 # ----------------------------
+
+HPC_ADDRESS=gadi.nci.org.au
 
 ${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENVIRONMENT}
