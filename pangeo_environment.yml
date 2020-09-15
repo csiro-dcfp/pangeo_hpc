@@ -138,6 +138,7 @@ dependencies:
   - nbconvert=5.6.1=py38h32f6830_1
   - nbformat=5.0.7=py_0
   - nbserverproxy=0.8.8=py_1000
+  - nc-time-axis=1.2.0=py_1
   - ncurses=6.2=he1b5a44_1
   - netcdf-fortran=4.5.3=mpi_mpich_h3923e1a_0
   - nettle=3.4.1=h1bed415_1002
@@ -249,3 +250,4 @@ dependencies:
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h516909a_1006
   - zstd=1.4.5=h6597ccf_2
+prefix: /g/data/v14/ds0092/software/miniconda3/envs/pangeo
