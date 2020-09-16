@@ -44,7 +44,7 @@ elif [[ "$SYSTEM" == "pearcey" ]]; then
     WALLTIME=${1:-"02:00:00"}
     NCPUS=${2:-"4"}
     MEM=${3:-"6GB"}
-    NOTEBOOK_DIR=${5:-"~"}
+    NOTEBOOK_DIR=${4:-"~"}
     PANGEO_RUN_SCRIPT_DIR="'$(pwd)'"
 
     rm -f jupyter_instructions.txt

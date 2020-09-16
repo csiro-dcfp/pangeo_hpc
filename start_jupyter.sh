@@ -62,10 +62,10 @@ To view the dask dashboard, enter the following into the dask labextension / new
   http://localhost:$PORT/proxy/<dashboard-port>/status
 where <dashboard-port> is the port serving your dashboard (8787 by default)
 
-Use Control-C to shut down this job...
+Use Control-C to shut down this job
+(note, sometimes Control-C does not kill the job, so you may need to cancel it manually)...
 "
 echo "$INSTRUCTIONS" >> $INSTRUCTIONSFILE
 
 # Wait for user kill command -----
 sleep inf
-
