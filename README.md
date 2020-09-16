@@ -62,8 +62,8 @@ New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 
 	You could now go ahead and submit your `start_jupyter_<system>.sh` script to the queue. However, for convenience I've also written a simple function for handling the submission of `start_jupyter_<system>.sh` and parsing instructions from the output file. This function receives some of the key job specifications as optional inputs so you don't have to edit the header on `start_jupyter_<system>.sh` everytime you want to change any of these. You can append this function to your `.bashrc` by running `./instantiate_pangeo_function.sh` (only run this **once**). The `pangeo` function signature is:
 	> Gadi: `pangeo walltime(02:00:00) ncpus(4) mem(16GB) project($PROJECT) notebook_directory(~)`\
-	> Zeus: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(6GB) account($PAWSEY_PROJECT) notebook_directory(~)`\
-	> Pearcey: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(4GB) notebook_directory(~)`
+	> Zeus: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(4GB) account($PAWSEY_PROJECT) notebook_directory(~)`\
+	> Pearcey: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(6GB) notebook_directory(~)`
 	
 	where the defaults are given in brackets
 
