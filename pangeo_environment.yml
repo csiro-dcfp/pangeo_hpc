@@ -29,6 +29,8 @@ dependencies:
   - cftime=1.2.1=py38h8790de6_0
   - chardet=3.0.4=py38h32f6830_1006
   - click=7.1.2=pyh9f0ad1d_0
+  - click-plugins=1.1.1=py_0
+  - cligj=0.5.0=py_0
   - cloudpickle=1.5.0=py_0
   - cryptography=3.0=py38h766eaa4_0
   - curl=7.71.1=he644dc0_4
@@ -48,12 +50,14 @@ dependencies:
   - expat=2.2.9=he1b5a44_2
   - fasteners=0.14.1=py_3
   - ffmpeg=4.3.1=h167e202_0
+  - fiona=1.8.17=py38h676c6b2_0
   - fontconfig=2.13.1=h1056068_1002
   - freetype=2.10.2=he06d7ca_0
   - freexl=1.0.5=h516909a_1002
   - fsspec=0.8.0=py_0
   - future=0.18.2=py38h32f6830_1
   - gdal=3.1.2=py38hb61cb63_1
+  - geopandas=0.8.1=py_0
   - geos=3.8.1=he1b5a44_0
   - geotiff=1.6.0=ha04d9d0_1
   - gettext=0.19.8.1=hc5be6a0_1002
@@ -112,6 +116,7 @@ dependencies:
   - libpng=1.6.37=hed695b0_1
   - libpq=12.3=h5513abc_0
   - libsodium=1.0.18=h516909a_0
+  - libspatialindex=1.9.3=he1b5a44_3
   - libspatialite=4.3.0a=h57f1b35_1039
   - libssh2=1.9.0=hab1572f_5
   - libstdcxx-ng=9.3.0=hdf63c60_14
@@ -135,6 +140,7 @@ dependencies:
   - mpich=3.3.2=hc856adb_0
   - msgpack-python=1.0.0=py38hbf85e49_1
   - multidict=4.7.5=py38h1e0a361_1
+  - munch=2.5.0=py_0
   - nbconvert=5.6.1=py38h32f6830_1
   - nbformat=5.0.7=py_0
   - nbserverproxy=0.8.8=py_1000
@@ -195,6 +201,7 @@ dependencies:
   - pyzmq=19.0.2=py38ha71036d_0
   - readline=8.0=he28a2e2_2
   - requests=2.24.0=pyh9f0ad1d_0
+  - rtree=0.9.4=py38h08f867b_1
   - scikit-learn=0.23.2=py38hee58b96_0
   - scipy=1.5.2=py38h8c5af15_0
   - send2trash=1.5.0=py_0
@@ -250,4 +257,3 @@ dependencies:
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h516909a_1006
   - zstd=1.4.5=h6597ccf_2
-prefix: /g/data/v14/ds0092/software/miniconda3/envs/pangeo
