@@ -9,6 +9,8 @@
 #    20/08/2020
 # ====================================
 
+APPEND_TO=~/.bashrc
+
 if [[ "$HOSTNAME" == *"gadi"* ]]; then
     SYSTEM=gadi
 elif [[ "$HOSTNAME" == *"pearcey"* ]]; then
@@ -80,6 +82,10 @@ elif [[ "$SYSTEM" == "zeus" ]]; then
 }'
 fi
 
-echo "$PANGEO_FUNCTION" >> ~/.bashrc
-source  ~/.bashrc
- 
+if grep -Fxq "function pangeo {" ${APPEND_TO}; then
+	echo "There is already a pangeo function in ${APPEND_TO}. Please delete this and rerun."
+else
+	echo "$PANGEO_FUNCTION" >> ${APPEND_TO}
+	source  ${APPEND_TO}
+	echo "Appended pangeo convenience function to ${APPEND_TO}"
+fi
