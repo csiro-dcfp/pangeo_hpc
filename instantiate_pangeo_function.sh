@@ -80,4 +80,4 @@ elif [[ "$SYSTEM" == "zeus" ]]; then
 }'
 fi
 
-echo "$PANGEO_FUNCTION" >> ~/.bashrc 
+echo "$PANGEO_FUNCTION" >> ~/.bash_profile 
