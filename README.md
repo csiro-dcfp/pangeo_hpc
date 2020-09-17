@@ -65,7 +65,14 @@ New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 	> Zeus: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(4GB) account($PAWSEY_PROJECT) notebook_directory(~)`\
 	> Pearcey: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(6GB) notebook_directory(~)`
 	
-	where the defaults are given in brackets
+	where the defaults are given in brackets. For example, to run with the default settings, one would simply enter into their terminal:
+	```
+	pangeo
+	```
+	To specify a 3 hour job with 6 cpus, one would enter:
+	```
+	pangeo 03:00:00 6
+	```
 
 8. Run the `pangeo` function or submit `start_jupyter_<system>.sh` to the queue. For the former, instructions for setting up port forwarding to view your JupyterLab session will be printed to your screen. For the latter, you'll have to parse them from the `jupyter_instructions.txt` file that will appear in the current directory. In both cases, the instructions will only appear once your jobs leaves the queue which may take a minute or so.
 
