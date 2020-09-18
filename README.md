@@ -10,6 +10,8 @@ New users to Gadi can sign up [here](https://my.nci.org.au/mancini/signup/0), bu
 
 New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 
+Ideally, users will have a github account (it's free and easy to set up [here](https://github.com/join)), but this is not essential.
+
 ## Getting set up:
 1. Log in to your system of choice:
 	> Gadi: `ssh -Y <username>@gadi.nci.org.au`\
