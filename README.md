@@ -24,7 +24,9 @@ New users to Pawsey can apply [here](https://pawsey.org.au/supercomputing/).
 	```  
 	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend instead using a persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
 	
-3. Clone this repo to a location of your choice: go to the desired location and run `git clone https://github.com/csiro-dcfp/pangeo_hpc.git` (or `git clone git@github.com:csiro-dcfp/pangeo_hpc.git` if using ssh keys).
+2. If there's any possibility you might edit the scripts in this repo and want to keep track of your edits using git, create a fork of this repo under your own github account by clicking on the `Fork` button on the top right of this page. Doing this will create a replica of this repo at `https://github.com/<your_username>/pangeo_hpc.git`. If you don't have a github account and you don't want to create one, go to step 3.
+	
+3. If you skipped 2., clone this repo to a location of your choice: go to the desired location and run `git clone https://github.com/csiro-dcfp/pangeo_hpc.git` (or `git clone git@github.com:csiro-dcfp/pangeo_hpc.git` if using ssh keys). Otherwise, clone your fork of this repo, e.g. `git clone https://github.com/<your_username>/pangeo_hpc.git`.
 
 4. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one: `conda env create -f pangeo_environment.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name <different_name> -f pangeo_environment.yml`.
 
