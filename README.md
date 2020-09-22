@@ -26,7 +26,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	```  
 	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend instead using a persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
 	
-	Note, the following scripts require that `conda` is initialised. When you first install conda you will be given the option to append some lines to your `.bashrc` that will initialise `conda` every time to log in. I recommend you do this. Otherwise, you'll have to initialise `conda` manually before progressing.
+	Note, to run the scripts in this repo `conda` will need to be initialised. When you first install conda you will be given the option to append some lines to your `.bashrc` that will initialise `conda` every time to log in. I recommend you do this. Otherwise, you'll have to initialise `conda` manually before progressing.
 	
 3. If there's any possibility you might edit the scripts in this repo and want to keep track of your edits using git, create a fork of this repo under your own github account by clicking on the `Fork` button on the top right of this page. Doing this will create a replica of this repo under your username at `https://github.com/<your_username>/pangeo_hpc.git`. If you don't have a github account and you don't want to create one, go to step 3.
 	
