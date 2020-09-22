@@ -39,19 +39,23 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	conda activate pangeo
 	
 	# For using the dask extension within JupyterLab (https://github.com/dask/dask-labextension)
-	jupyter labextension install dask-labextension
+	jupyter labextension install --clean dask-labextension
 	jupyter serverextension enable dask_labextension
 
 	# For using widgets within JupyterLab (https://ipywidgets.readthedocs.io/en/latest/user_install.html)
-	jupyter labextension install @jupyter-widgets/jupyterlab-manager 
+	jupyter labextension install --clean @jupyter-widgets/jupyterlab-manager 
 	jupyter nbextension enable --py widgetsnbextension --sys-prefix
 
 	# For simplifying setting up the dask dashboard (https://github.com/Viasat/nbserverproxy)
 	jupyter serverextension enable --py nbserverproxy
 
 	# For managing versions of your Jupyter notebooks in other languages (https://github.com/mwouts/jupytext)
-	jupyter labextension install jupyterlab-jupytext 
+	jupyter labextension install --clean jupyterlab-jupytext 
 	jupyter nbextension enable --py jupytext
+	
+	# Clean up unnecessary cache files to reduce inode footprint
+	jupyter lab clean
+	jlpm cache clean
 	```
 7. Configure your Jupyter password: 
 	```
