@@ -31,15 +31,17 @@ if [[ "$SYSTEM" == "gadi" ]]; then
     PANGEO_RUN_SCRIPT_DIR="'$(pwd)'"
 
     rm -f jupyter_instructions.txt
-
+    
     jobid=$(qsub -l walltime=${WALLTIME} -l mem=${MEM} -l ncpus=${NCPUS} -P ${PROJECT} -v "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Gadi.sh)
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
+    trap '\'' '\'' INT
     tail -f -n 50 jupyter_instructions.txt
 
     echo "Closing ${jobid}"
     qdel ${jobid}
+    trap - INT
 }'
 elif [[ "$SYSTEM" == "pearcey" ]]; then
     PANGEO_FUNCTION='function pangeo {
@@ -50,15 +52,17 @@ elif [[ "$SYSTEM" == "pearcey" ]]; then
     PANGEO_RUN_SCRIPT_DIR="'$(pwd)'"
 
     rm -f jupyter_instructions.txt
-
+    
     jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Pearcey.sh)
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
+    trap '\'' '\'' INT
     tail -f -n 50 jupyter_instructions.txt
 
     echo "Closing ${jobid}"
     qdel ${jobid}
+    trap - INT
 }'
 elif [[ "$SYSTEM" == "zeus" ]]; then
     PANGEO_FUNCTION='function pangeo {
@@ -75,10 +79,12 @@ elif [[ "$SYSTEM" == "zeus" ]]; then
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
+    trap '\'' '\'' INT
     tail -f -n 50 jupyter_instructions.txt
 
     echo "Closing ${jobid}"
     qdel ${jobid}
+    trap - INT
 }'
 fi
 
