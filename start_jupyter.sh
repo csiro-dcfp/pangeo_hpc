@@ -17,18 +17,23 @@ LOG_DIR=$2
 HPC_ADDRESS=$3
 PANGEO_ENVIRONMENT=$4
 
-conda deactivate
-conda activate ${PANGEO_ENVIRONMENT}
-
 HOST=$(hostname)
 mkdir -p $LOG_DIR
 LOGFILE=$LOG_DIR/pangeo_jupyter_log.$(date +%Y%m%dT%H%M%S)
 INSTRUCTIONSFILE=./jupyter_instructions.txt
-rm -f $INSTRUCTIONSFILE
+
+# Check that conda is installed and initialised
+which conda > /dev/null 2>&1
+status=$?
+if (( "$status" != "0" )); then
+    echo -e "conda must be installed and initialised to run these scripts. \n\nUse Control-C to exit this message, then initialise conda and re-run." > $INSTRUCTIONSFILE
+    exit 0
+fi
+conda deactivate
+conda activate ${PANGEO_ENVIRONMENT}
 
 # Start the notebook -----
-echo -e "Starting jupyter notebook..." \
-> $INSTRUCTIONSFILE
+echo -e "Starting jupyter notebook..." > $INSTRUCTIONSFILE
 JPORT=$(shuf -n 1 -i 8301-8400) # As in NCI pangeo module
 jupyter lab --no-browser --ip=$HOST --port=${JPORT} --notebook-dir=$NOTEBOOK_DIR \
 >& $LOGFILE &
@@ -41,10 +46,10 @@ while [[ $ADDRESS != *"${HOST}"* ]]; do
     ELAPSED=$(($ELAPSED+1))
     ADDRESS=$(grep -e '^\[.*\]\s*http://.*:.*/.*' $LOGFILE | head -n 1 | awk -F'//' '{print $NF}')
     if [[ $ELAPSED -gt 360 ]]; then
-        echo -e "Something went wrong:\n-----"
-        cat $LOGFILE
-        echo "-----"
-        kill_server
+        echo -e "\nSomething went wrong:\n-----" >> $INSTRUCTIONSFILE
+        cat $LOGFILE >> $INSTRUCTIONSFILE
+        echo "-----" >> $INSTRUCTIONSFILE
+        exit 0 
     fi
 done
 
