@@ -53,7 +53,7 @@ elif [[ "$SYSTEM" == "pearcey" ]]; then
 
     rm -f jupyter_instructions.txt
     
-    jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Pearcey.sh)
+    jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Pearcey.sh | sed '\''s/[^0-9]*//g'\'')
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
@@ -75,9 +75,7 @@ elif [[ "$SYSTEM" == "zeus" ]]; then
 
     rm -f jupyter_instructions.txt
 
-    jobstr=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --account=${PROJECT} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Zeus.sh)
-    prefix="Submitted batch job "
-    jobid=${jobstr#"$prefix"}
+    jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --account=${PROJECT} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Zeus.sh | sed '\''s/[^0-9]*//g'\'')
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
