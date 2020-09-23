@@ -39,19 +39,22 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	conda activate pangeo
 	
 	# For using the dask extension within JupyterLab (https://github.com/dask/dask-labextension)
-	jupyter labextension install --clean dask-labextension
+	jupyter labextension install --no-build --clean dask-labextension
 	jupyter serverextension enable --sys-prefix --py dask_labextension
 
 	# For using widgets within JupyterLab (https://ipywidgets.readthedocs.io/en/latest/user_install.html)
-	jupyter labextension install --clean @jupyter-widgets/jupyterlab-manager 
+	jupyter labextension install --no-build --clean @jupyter-widgets/jupyterlab-manager 
 	jupyter nbextension enable --sys-prefix --py widgetsnbextension
 
 	# For simplifying setting up the dask dashboard (https://github.com/Viasat/nbserverproxy)
 	jupyter serverextension enable --sys-prefix --py nbserverproxy
 
 	# For managing versions of your Jupyter notebooks in other languages (https://github.com/mwouts/jupytext)
-	jupyter labextension install --clean jupyterlab-jupytext 
+	jupyter labextension install --no-build --clean jupyterlab-jupytext 
 	jupyter nbextension enable --sys-prefix --py jupytext
+	
+	# Build JupyterLab
+	jupyter lab build
 	
 	# Clean up unnecessary cache files to reduce inode footprint
 	jupyter lab clean
