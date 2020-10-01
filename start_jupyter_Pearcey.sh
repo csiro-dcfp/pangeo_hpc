@@ -11,6 +11,7 @@
 #
 #    USAGE: qsub --export NOTEBOOK_DIR=<directory to start notebook in> \
 #                --export RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
+#                --export PANGEO_ENV_NAME=<name of pangeo environment> \
 #                start_jupyter_Pearcey.sh
 #
 #    Dougie Squire
