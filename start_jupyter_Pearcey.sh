@@ -20,14 +20,14 @@
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
     RUN_SCRIPT_DIR=$2
+    PANGEO_ENV_NAME=$3
 fi
 
 # USER TO EDIT (optional)
 # ----------------------------
-PANGEO_ENVIRONMENT=pangeo
 LOG_DIR=/scratch1/${USER}/tmp/logs
 # ----------------------------
 
 HPC_ADDRESS=pearcey.hpc.csiro.au
 
-${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENVIRONMENT}
+${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENV_NAME}
