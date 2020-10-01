@@ -27,12 +27,15 @@ if [[ "$SYSTEM" == "gadi" ]]; then
     NCPUS=${2:-"4"}
     MEM=${3:-"16GB"}
     PROJECT=${4:-"'$PROJECT'"}
-    NOTEBOOK_DIR=${5:-"~"}
+    PANGEO_ENV_NAME=${5:-"pangeo"}
+    NOTEBOOK_DIR=${6:-"~"}
     PANGEO_RUN_SCRIPT_DIR="'$(pwd)'"
 
     rm -f jupyter_instructions.txt
     
-    jobid=$(qsub -l walltime=${WALLTIME} -l mem=${MEM} -l ncpus=${NCPUS} -P ${PROJECT} -v "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Gadi.sh)
+    jobid=$(qsub -l walltime=${WALLTIME} -l mem=${MEM} -l ncpus=${NCPUS} -P ${PROJECT} \
+    	-v "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR},PANGEO_ENV_NAME=${PANGEO_ENV_NAME}" \
+	${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Gadi.sh)
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
@@ -48,12 +51,15 @@ elif [[ "$SYSTEM" == "pearcey" ]]; then
     WALLTIME=${1:-"02:00:00"}
     NCPUS=${2:-"4"}
     MEM=${3:-"6GB"}
-    NOTEBOOK_DIR=${4:-"~"}
+    PANGEO_ENV_NAME=${4:-"pangeo"}
+    NOTEBOOK_DIR=${5:-"~"}
     PANGEO_RUN_SCRIPT_DIR="'$(pwd)'"
 
     rm -f jupyter_instructions.txt
     
-    jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Pearcey.sh | sed '\''s/[^0-9]*//g'\'')
+    jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} \
+    	--export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR},PANGEO_ENV_NAME=${PANGEO_ENV_NAME}" \
+	${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Pearcey.sh | sed '\''s/[^0-9]*//g'\'')
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
@@ -70,12 +76,15 @@ elif [[ "$SYSTEM" == "zeus" ]]; then
     NCPUS=${2:-"4"}
     MEM=${3:-"4GB"}
     PROJECT=${4:-"'$PAWSEY_PROJECT'"}
-    NOTEBOOK_DIR=${5:-"~"}
+    PANGEO_ENV_NAME=${5:-"pangeo"}
+    NOTEBOOK_DIR=${6:-"~"}
     PANGEO_RUN_SCRIPT_DIR="'$(pwd)'"
 
     rm -f jupyter_instructions.txt
 
-    jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --account=${PROJECT} --export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR}" ${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Zeus.sh | sed '\''s/[^0-9]*//g'\'')
+    jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} --account=${PROJECT} \
+    	--export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR},PANGEO_ENV_NAME=${PANGEO_ENV_NAME}" \
+	${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Zeus.sh | sed '\''s/[^0-9]*//g'\'')
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done
