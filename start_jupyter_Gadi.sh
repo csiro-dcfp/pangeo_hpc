@@ -17,6 +17,7 @@
 #
 #    USAGE: qsub -v NOTEBOOK_DIR=<directory to start notebook in> \
 #                -v RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
+#                -v PANGEO_ENV_NAME=<name of pangeo environment> \
 #		 start_jupyter_Gadi.sh
 #
 #    Dougie Squire
