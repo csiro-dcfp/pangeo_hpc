@@ -31,6 +31,7 @@ if (( "$status" != "0" )); then
 fi
 conda deactivate
 conda activate ${PANGEO_ENVIRONMENT}
+echo conda list | grep jupyter 
 
 # Start the notebook -----
 echo -e "Starting jupyter notebook..." > $INSTRUCTIONSFILE
@@ -49,7 +50,7 @@ while [[ $ADDRESS != *"${HOST}"* ]]; do
         echo -e "\nSomething went wrong:\n-----" >> $INSTRUCTIONSFILE
         cat $LOGFILE >> $INSTRUCTIONSFILE
         echo "-----" >> $INSTRUCTIONSFILE
-        exit 0 
+        exit 0
     fi
 done
 

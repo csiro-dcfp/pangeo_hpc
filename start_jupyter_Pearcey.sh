@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=6G
 #SBATCH --cpus-per-task=4
-#SBATCH --output=/dev/null 
+##SBATCH --output=/dev/null 
 
 # ====================================
 # Submit a job running Jupyter on Pearcey
