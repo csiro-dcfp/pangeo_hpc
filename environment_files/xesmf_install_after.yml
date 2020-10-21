@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - esmpy # 8.0.1
+  - xesmf # 0.3.0

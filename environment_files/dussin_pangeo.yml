@@ -1,0 +1,17 @@
+name: dussin_pangeo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - jupyterlab=2.1.5
+  - ipython=7.16
+  - papermill=2.1.2
+  - netcdf4=1.5.3
+  - esmf=8.0.1=mpi_openmpi_hda7c4e6_0
+  - esmpy=8.0.1=mpi_openmpi_py38h51f2404_0
+  - matplotlib=3.2.2
+  - cartopy=0.17.0
+  - xarray=0.16.0
+  - xgcm
+  - pip
+    - pytest

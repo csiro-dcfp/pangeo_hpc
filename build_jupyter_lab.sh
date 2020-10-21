@@ -27,6 +27,8 @@ echo -e "----> Done with dask dashboard builds" && \
 jupyter labextension install --no-build --clean jupyterlab-jupytext && \
 jupyter nbextension enable --sys-prefix --py jupytext && \
 echo -e "----> Done with other language builds" && \
+jupyter labextension install @pyviz/jupyterlab_pyviz && \
+echo -e "----> Done with pyviz build" && \
 # Build JupyterLab
 jupyter lab build && \
 echo -e "----> Done with main build" && \
