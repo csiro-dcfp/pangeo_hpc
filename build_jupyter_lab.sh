@@ -4,14 +4,14 @@
 # run a set of commands to build all thr jupyterlab extensions
 #
 #    USAGE: ./build_jupyter_lab.sh
-#    Note: you need to edit the environment name to suit your useage [Issue: improve this]
 #
 #    Thomas Moore
 #    20/10/2020
 # ====================================
+env_name=${1?Error: no name given}
 
 echo -e "----> Starting all the builds"
-conda activate pangeo_xgcm_xesmf && \
+conda activate ${env_name} && \
 # For using the dask extension within JupyterLab (https://github.com/dask/dask-labextension)
 jupyter labextension install --no-build --clean dask-labextension && \
 jupyter serverextension enable --sys-prefix --py dask_labextension && \
