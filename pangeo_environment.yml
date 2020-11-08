@@ -153,6 +153,7 @@ dependencies:
   - ncurses=6.2=he1b5a44_2
   - nest-asyncio=1.4.2=pyhd8ed1ab_0
   - netcdf-fortran=4.5.3=mpi_mpich_h3923e1a_1
+  - netcdf4=1.5.4=nompi_py38hec8b9af_103
   - nettle=3.4.1=h1bed415_1002
   - nodejs=14.7.0=h568c755_0
   - notebook=6.1.4=py38h32f6830_1
