@@ -14,6 +14,7 @@
 #
 #    USAGE: qsub --export NOTEBOOK_DIR=<directory to start notebook in> \
 #                --export RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
+#                --export PANGEO_ENV_NAME=<name of pangeo environment> \
 #                start_jupyter_Zeus.sh
 #
 #    Dougie Squire
@@ -23,14 +24,14 @@
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
     RUN_SCRIPT_DIR=$2
+    PANGEO_ENV_NAME=$3
 fi
 
 # USER TO EDIT (optional)
 # ----------------------------
-PANGEO_ENVIRONMENT=pangeo
 LOG_DIR=/scratch/${PAWSEY_PROJECT}/${USER}/tmp/logs
 # ----------------------------
 
 HPC_ADDRESS=zeus.pawsey.org.au
 
-${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENVIRONMENT}
+${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENV_NAME}

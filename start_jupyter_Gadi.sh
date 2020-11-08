@@ -17,6 +17,7 @@
 #
 #    USAGE: qsub -v NOTEBOOK_DIR=<directory to start notebook in> \
 #                -v RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
+#                -v PANGEO_ENV_NAME=<name of pangeo environment> \
 #		 start_jupyter_Gadi.sh
 #
 #    Dougie Squire
@@ -26,14 +27,14 @@
 if [ ! $# -eq 0 ]; then
     NOTEBOOK_DIR=$1
     RUN_SCRIPT_DIR=$2
+    PANGEO_ENV_NAME=$3
 fi
 
 # USER TO EDIT (optional)
 # ----------------------------
-PANGEO_ENVIRONMENT=pangeo
 LOG_DIR=/g/data/${PROJECT}/${USER}/tmp/logs
 # ----------------------------
 
 HPC_ADDRESS=gadi.nci.org.au
 
-${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENVIRONMENT}
+${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENV_NAME}
