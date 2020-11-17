@@ -21,10 +21,10 @@ dependencies:
   - brotlipy=0.7.0=py38h8df0ef7_1001
   - bzip2=1.0.8=h516909a_3
   - c-ares=1.16.1=h516909a_3
-  - ca-certificates=2020.6.20=hecda079_0
+  - ca-certificates=2020.11.8=ha878542_0
   - cairo=1.16.0=h9f066cc_1006
   - cartopy=0.18.0=py38hed7a9dc_1
-  - certifi=2020.6.20=py38h924ce5b_2
+  - certifi=2020.11.8=py38h578d9bd_0
   - cffi=1.14.3=py38h1bdcb99_1
   - cfitsio=3.470=h2e3daa1_7
   - cftime=1.2.1=py38h8790de6_0
@@ -138,6 +138,7 @@ dependencies:
   - matplotlib-base=3.3.0=py38h91b0d89_1
   - mistune=0.8.4=py38h1e0a361_1002
   - monotonic=1.5=py_0
+  - mord=0.6=py_0
   - more-itertools=8.6.0=pyhd8ed1ab_0
   - mpi=1.0=mpich
   - mpi4py=3.0.3=py38h4a80816_2
