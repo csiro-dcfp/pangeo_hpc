@@ -21,10 +21,10 @@ dependencies:
   - brotlipy=0.7.0=py38h8df0ef7_1001
   - bzip2=1.0.8=h516909a_3
   - c-ares=1.16.1=h516909a_3
-  - ca-certificates=2020.11.8=ha878542_0
+  - ca-certificates=2020.12.5=ha878542_0
   - cairo=1.16.0=h9f066cc_1006
-  - cartopy=0.18.0=py38hc1e57b6_5
-  - certifi=2020.11.8=py38h578d9bd_0
+  - cartopy=0.18.0=py38hed7a9dc_1
+  - certifi=2020.12.5=py38h578d9bd_0
   - cffi=1.14.3=py38h1bdcb99_1
   - cfitsio=3.470=h2e3daa1_7
   - cftime=1.2.1=py38h8790de6_0
@@ -114,7 +114,6 @@ dependencies:
   - libkml=1.3.0=h74f7ee3_1012
   - liblapack=3.8.0=17_openblas
   - libllvm10=10.0.1=he513fc3_3
-  - libllvm9=9.0.1=he513fc3_1
   - libnetcdf=4.7.4=mpi_mpich_h2f92d0d_6
   - libnghttp2=1.41.0=h8cfc5f6_2
   - libopenblas=0.3.10=pthreads_hb3c22a3_4
@@ -165,7 +164,7 @@ dependencies:
   - olefile=0.46=pyh9f0ad1d_1
   - openh264=2.1.1=h8b12597_0
   - openjpeg=2.3.1=h981e76c_3
-  - openssl=1.1.1h=h516909a_0
+  - openssl=1.1.1i=h7f98852_0
   - owslib=0.20.0=py_0
   - packaging=20.4=pyh9f0ad1d_0
   - pandas=1.1.0=py38h950e882_0
@@ -173,6 +172,7 @@ dependencies:
   - pandocfilters=1.4.2=py_1
   - parso=0.8.0=py_1
   - partd=1.1.0=py_0
+  - patsy=0.5.1=py_0
   - pcre=8.44=he1b5a44_0
   - pexpect=4.8.0=pyh9f0ad1d_2
   - pickleshare=0.7.5=py_1003
@@ -214,6 +214,8 @@ dependencies:
   - rtree=0.9.4=py38h08f867b_1
   - scikit-learn=0.23.2=py38h5d63f67_2
   - scipy=1.5.2=py38h8c5af15_0
+  - seaborn=0.11.0=ha770c72_1
+  - seaborn-base=0.11.0=pyhd8ed1ab_1
   - send2trash=1.5.0=py_0
   - setuptools=49.6.0=py38h924ce5b_2
   - shapely=1.7.1=py38hc7361b7_1
@@ -221,7 +223,7 @@ dependencies:
   - six=1.15.0=pyh9f0ad1d_0
   - sortedcontainers=2.2.2=pyh9f0ad1d_0
   - sqlite=3.33.0=h4cf870e_1
-  - tbb=2020.2=hc9558a2_0
+  - statsmodels=0.12.1=py38h0b5ebd8_1
   - tblib=1.6.0=py_0
   - terminado=0.9.1=py38h32f6830_1
   - testpath=0.4.4=py_0
