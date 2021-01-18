@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #PBS -P v14
-#PBS -l storage=gdata/v14+scratch/v14
+#PBS -l storage=gdata/v14+scratch/v14+scratch/ux06
 
 #PBS -q normal
 #PBS -l walltime=02:00:00
@@ -10,7 +10,7 @@
 #PBS -l jobfs=100GB
 #PBS -l wd
 #PBS -j oe
-#PBS -o /dev/null
+##PBS -o /dev/null
 
 # ====================================
 # Submit a job running Jupyter on Gadi
@@ -32,7 +32,7 @@ fi
 
 # USER TO EDIT (optional)
 # ----------------------------
-LOG_DIR=/g/data/${PROJECT}/${USER}/tmp/logs
+LOG_DIR=/scratch/${PROJECT}/${USER}/tmp/logs
 # ----------------------------
 
 HPC_ADDRESS=gadi.nci.org.au
