@@ -53,6 +53,9 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	jupyter labextension install --no-build --clean jupyterlab-jupytext 
 	jupyter nbextension enable --sys-prefix --py jupytext
 	
+	# For visual debugging (https://github.com/jupyterlab/debugger)
+	jupyter labextension install --no-build --clean @jupyterlab/debugger
+
 	# Build JupyterLab
 	jupyter lab build
 	

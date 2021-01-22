@@ -23,8 +23,8 @@ dependencies:
   - c-ares=1.16.1=h516909a_3
   - ca-certificates=2020.12.5=ha878542_0
   - cairo=1.16.0=h9f066cc_1006
-  - cartopy=0.18.0
-  - certifi=2020.12.5=py38h578d9bd_0
+  - cartopy=0.18.0=py38h9b6dd9e_7
+  - certifi=2020.12.5=py38h578d9bd_1
   - cffi=1.14.3=py38h1bdcb99_1
   - cfitsio=3.470=h2e3daa1_7
   - cftime=1.2.1=py38h8790de6_0
@@ -41,6 +41,7 @@ dependencies:
   - dask-core=2.27.0=py_0
   - dask-jobqueue=0.7.1=py_0
   - dask-labextension=2.0.2=py_0
+  - debugpy=1.2.1=py38h709712a_1
   - decorator=4.4.2=py_0
   - defusedxml=0.6.0=py_0
   - distributed=2.27.0=py38h32f6830_0
@@ -75,7 +76,7 @@ dependencies:
   - importlib_metadata=2.0.0=1
   - iniconfig=1.1.1=pyh9f0ad1d_0
   - ipykernel=5.3.4=py38h1cdfbd6_1
-  - ipython=7.19.0
+  - ipython=7.19.0=py38h81c977d_2
   - ipython_genutils=0.2.0=py_1
   - jedi=0.15.2=py38_0
   - jinja2=2.11.2=pyh9f0ad1d_0
@@ -84,7 +85,7 @@ dependencies:
   - json-c=0.13.1=hbfbb72e_1002
   - json5=0.9.5=pyh9f0ad1d_0
   - jsonschema=3.2.0=py_2
-  - jupyter-server-proxy=1.5.0=py_0
+  - jupyter-server-proxy=1.5.3=pyhd8ed1ab_0
   - jupyter_client=6.1.7=py_0
   - jupyter_core=4.6.3=py38h32f6830_2
   - jupyterlab=2.2.9=py_0
@@ -149,7 +150,6 @@ dependencies:
   - nbclient=0.5.1=py_0
   - nbconvert=6.0.7=py38h32f6830_2
   - nbformat=5.0.8=py_0
-  - nbserverproxy=0.8.8=py_1000
   - nc-time-axis=1.2.0=py_1
   - ncurses=6.2=h58526e2_3
   - nest-asyncio=1.4.2=pyhd8ed1ab_0
@@ -189,6 +189,7 @@ dependencies:
   - properscoring=0.1=py_0
   - psutil=5.7.3=py38h8df0ef7_0
   - pthread-stubs=0.4=h14c3975_1001
+  - ptvsd=4.3.2=py38h497a2fe_3
   - ptyprocess=0.6.0=py_1001
   - py=1.9.0=pyh9f0ad1d_0
   - pycparser=2.20=pyh9f0ad1d_2
@@ -247,6 +248,8 @@ dependencies:
   - xarray=0.16.1=py_0
   - xerces-c=3.2.3=hfe33f54_1
   - xesmf=0.3.0=py_0
+  - xeus=0.25.3=h78d96c3_1
+  - xeus-python=0.9.4=py38h56bed4f_1
   - xhistogram=0.1.1=py_0
   - xorg-kbproto=1.0.7=h14c3975_1002
   - xorg-libice=1.0.10=h516909a_0
