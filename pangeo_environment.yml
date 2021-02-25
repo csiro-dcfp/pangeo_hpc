@@ -33,6 +33,10 @@ dependencies:
   - click-plugins=1.1.1=py_0
   - cligj=0.7.0=py_0
   - cloudpickle=1.6.0=py_0
+  - cmasher=1.5.10=pyhd8ed1ab_0
+  - cmcrameri=1.2=pyhd8ed1ab_0
+  - cmocean=2.0=py_3
+  - colorspacious=1.1.2=pyh24bf2e0_0
   - cryptography=3.2.1=py38h7699a38_0
   - curl=7.71.1=he644dc0_8
   - cycler=0.10.0=py_2
@@ -46,6 +50,7 @@ dependencies:
   - defusedxml=0.6.0=py_0
   - distributed=2.27.0=py38h32f6830_0
   - docrep=0.3.1=pyh9f0ad1d_0
+  - e13tools=0.9.5=py_0
   - entrypoints=0.3=py38h32f6830_1002
   - esmf=8.0.1=mpi_mpich_h213fab7_101
   - esmpy=8.0.1=mpi_mpich_py38h08b7006_100
@@ -164,7 +169,7 @@ dependencies:
   - olefile=0.46=pyh9f0ad1d_1
   - openh264=2.1.1=h8b12597_0
   - openjpeg=2.3.1=h981e76c_3
-  - openssl=1.1.1i=h7f98852_0
+  - openssl=1.1.1j=h7f98852_0
   - owslib=0.20.0=py_0
   - packaging=20.4=pyh9f0ad1d_0
   - pandas=1.1.0=py38h950e882_0
