@@ -32,7 +32,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	
 4. Clone your fork of this repo to a location of your choice on Gadi, Zeus or Pearcey: go to the desired location and run `git clone https://github.com/<your_username>/pangeo_hpc.git` (or `git clone git@github.com:<your_username>/pangeo_hpc.git` if using ssh keys). If you didn't create a fork, clone this repo directly: `git clone https://github.com/csiro-dcfp/pangeo_hpc.git`.
 
-5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `pangeo_environment.yml` file in this repo: `conda env create -f pangeo_environment.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name <different_name> -f pangeo_environment.yml`.
+5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `pangeo_environment.yml` file in this repo: `conda env create -f pangeo_environment.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name <different_name> -f pangeo_environment.yml`.  [ NB: if channel priority is set to strict, for example to conda-forge, the environment creation may fail with warning "Note that strict channel priority may have removed packages required for satisfiability." ]
 
 6. Activate your new `pangeo` environment and install/enable the following Jupyter labextensions (you'll only need to do this once). Note, these are not essential, but they'll make some handy tools available from your JupyterLab environement:
 	```
