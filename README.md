@@ -46,13 +46,16 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	jupyter labextension install --no-build --clean @jupyter-widgets/jupyterlab-manager 
 	jupyter nbextension enable --sys-prefix --py widgetsnbextension
 
-	# For simplifying setting up the dask dashboard (https://github.com/Viasat/nbserverproxy)
-	jupyter serverextension enable --sys-prefix --py nbserverproxy
+	# For simplifying setting up the dask dashboard (https://github.com/jupyterhub/jupyter-server-proxy)
+	jupyter labextension install --no-build --clean @jupyterlab/server-proxy
 
 	# For managing versions of your Jupyter notebooks in other languages (https://github.com/mwouts/jupytext)
 	jupyter labextension install --no-build --clean jupyterlab-jupytext 
 	jupyter nbextension enable --sys-prefix --py jupytext
 	
+	# For visual debugging (https://github.com/jupyterlab/debugger)
+	jupyter labextension install --no-build --clean @jupyterlab/debugger
+
 	# Build JupyterLab
 	jupyter lab build
 	
