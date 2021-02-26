@@ -1,12 +1,12 @@
 #!/bin/bash -l
 
 # ====================================
-# run a set of commands to build all thr jupyterlab extensions
+# run a set of commands to build all the jupyterlab extensions
 #
 #    USAGE: ./build_jupyter_lab.sh
 #
 #    Thomas Moore
-#    20/10/2020
+#    26/02/2021
 # ====================================
 env_name=${1?Error: no name given}
 
@@ -20,8 +20,8 @@ echo -e "----> Done with dask builds" && \
 jupyter labextension install --no-build --clean @jupyter-widgets/jupyterlab-manager && \
 jupyter nbextension enable --sys-prefix --py widgetsnbextension && \
 echo -e "----> Done with widget builds" && \
-# For simplifying setting up the dask dashboard (https://github.com/Viasat/nbserverproxy)
-jupyter serverextension enable --sys-prefix --py nbserverproxy && \
+# For simplifying setting up the dask dashboard (https://github.com/jupyterhub/jupyter-server-proxy)
+jupyter labextension install --no-build --clean @jupyterlab/server-proxy && \
 echo -e "----> Done with dask dashboard builds" && \
 # For managing versions of your Jupyter notebooks in other languages (https://github.com/mwouts/jupytext)
 jupyter labextension install --no-build --clean jupyterlab-jupytext && \
