@@ -24,11 +24,14 @@ echo -e "----> Done with widget builds" && \
 jupyter labextension install --no-build --clean @jupyterlab/server-proxy && \
 echo -e "----> Done with dask dashboard builds" && \
 # For managing versions of your Jupyter notebooks in other languages (https://github.com/mwouts/jupytext)
-jupyter labextension install --no-build --clean jupyterlab-jupytext && \
-jupyter nbextension enable --sys-prefix --py jupytext && \
-echo -e "----> Done with other language builds" && \
+#jupyter labextension install --no-build --clean jupyterlab-jupytext && \
+#jupyter nbextension enable --sys-prefix --py jupytext && \
+#echo -e "----> Done with other language builds" && \
 jupyter labextension install @pyviz/jupyterlab_pyviz && \
 echo -e "----> Done with pyviz build" && \
+# For visual debugging (https://github.com/jupyterlab/debugger)
+jupyter labextension install --no-build --clean @jupyterlab/debugger && \
+echo -e "----> Done with @jupyterlab/debugger" && \
 # Build JupyterLab
 jupyter lab build && \
 echo -e "----> Done with main build" && \
