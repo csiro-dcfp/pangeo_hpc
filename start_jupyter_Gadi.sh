@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #PBS -P v14
-#PBS -l storage=gdata/v14+scratch/v14+scratch/ux06+gdata/lp01+scratch/lp01
+#PBS -l storage=gdata/v14+scratch/v14+scratch/ux06+gdata/lp01+scratch/lp01+gdata/rr3+scratch/rr3
 
 #PBS -q normal
 #PBS -l walltime=02:00:00
