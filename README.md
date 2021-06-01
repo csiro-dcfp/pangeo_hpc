@@ -24,47 +24,35 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
 	./Miniconda3-latest-Linux-x86_64.sh
 	```  
-	You'll get prompted for where to install conda. The default is home, which is quite limited for space. I recommend instead using a persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
+	You'll get prompted for where to install conda. The default is home, which may be quite limited for space. It may therefore be a good idea to instead use a different persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
 	
 	Note, to run the scripts in this repo `conda` will need to be initialised. When you first install conda you will be given the option to append some lines to your `.bashrc` that will initialise `conda` every time you log in. I recommend doing this. Otherwise, you'll have to initialise `conda` manually before progressing.
 	
 3. If there's any possibility you might edit the scripts in this repo and want to keep track of your edits using git, create a fork of this repo under your own github account by clicking on the `Fork` button on the top right of this page. Doing this will create a replica of this repo under your username at `https://github.com/<your_username>/pangeo_hpc.git`. If you don't have a github account and you don't want to create one, go to step 4.
 	
-4. Clone your fork of this repo to a location of your choice on Gadi, Zeus or Pearcey: go to the desired location and run `git clone https://github.com/<your_username>/pangeo_hpc.git` (or `git clone git@github.com:<your_username>/pangeo_hpc.git` if using ssh keys). If you didn't create a fork, clone this repo directly: `git clone https://github.com/csiro-dcfp/pangeo_hpc.git`.
+4. Clone your fork of this repo to a location of your choice on Gadi, Zeus or Pearcey: go to the desired location and run 
+	```
+	git clone https://github.com/<your_username>/pangeo_hpc.git
+	``` 
+	(or if your using ssh keys: `git clone git@github.com:<your_username>/pangeo_hpc.git`)
+	
+	If you didn't create a fork, clone this repo directly: 
+	```
+	git clone https://github.com/csiro-dcfp/pangeo_hpc.git
+	```
 
-5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `pangeo_environment.yml` file in this repo: `conda env create -f pangeo_environment.yml`. This will create a new conda environment called `pangeo`. If you wish to use a different name: `conda env create --name <different_name> -f pangeo_environment.yml`.
+5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `pangeo_environment.yml` file in this repo: 
+	```
+	conda env create -f pangeo_environment.yml
+	```
+	This will create a new conda environment called `pangeo`. If you wish to use a different name: 
+	```
+	conda env create --name <different_name> -f pangeo_environment.yml
+	```
 
-6. Activate your new `pangeo` environment and install/enable the following Jupyter labextensions (you'll only need to do this once). Note, these are not essential, but they'll make some handy tools available from your JupyterLab environement:
+6. Activate your new `pangeo` environment and configure your Jupyter password (note, in a previous version of these instructions, you would have also installed and enabled a number of Jupyter labextensions at this point. This is no longer necessary with JupyterLab version 3): 
 	```
 	conda activate pangeo
-	
-	# For using the dask extension within JupyterLab (https://github.com/dask/dask-labextension)
-	jupyter labextension install --no-build --clean dask-labextension
-	jupyter serverextension enable --sys-prefix --py dask_labextension
-
-	# For using widgets within JupyterLab (https://ipywidgets.readthedocs.io/en/latest/user_install.html)
-	jupyter labextension install --no-build --clean @jupyter-widgets/jupyterlab-manager 
-	jupyter nbextension enable --sys-prefix --py widgetsnbextension
-
-	# For simplifying setting up the dask dashboard (https://github.com/jupyterhub/jupyter-server-proxy)
-	jupyter labextension install --no-build --clean @jupyterlab/server-proxy
-
-	# For managing versions of your Jupyter notebooks in other languages (https://github.com/mwouts/jupytext)
-	jupyter labextension install --no-build --clean jupyterlab-jupytext 
-	jupyter nbextension enable --sys-prefix --py jupytext
-	
-	# For visual debugging (https://github.com/jupyterlab/debugger)
-	jupyter labextension install --no-build --clean @jupyterlab/debugger
-
-	# Build JupyterLab
-	jupyter lab build
-	
-	# Clean up unnecessary cache files to reduce inode footprint
-	jupyter lab clean
-	jlpm cache clean
-	```
-7. Configure your Jupyter password: 
-	```
 	jupyter notebook --generate-config
 	jupyter notebook password
 	```
@@ -72,9 +60,13 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	
 8. At this point, you're ready to submit a job to run your JupyterLab and Python instances. Once this job is running and you've accessed JupyterLab via your web browser (see below) you'll be able to request additional resources as a dask cluster (using `dask-jobqueue`). We can submit a job to run our JupyterLab instance using the relevant `start_jupyter_<system>.sh` script but it may require a little editing first:
 
-	1. Edit the PBS/SLURM header information (the `#PBS`/`#SLURM` lines) to reflect your project (if relevant), required resources, etc. Remember these do not need to represent the total resources you require for the job you have planned because you will be able to request additional resources from within JupyterLab using `dask-jobqueue`. For interactive science work, I usually request few resources for a relatively long time, and then do compute-heavy reduction task(s) on shorter-term `dask-jobqueue` clusters. With this type of workflow, the resources you request in `start_jupyter_<system>.sh` need only reflect what is needed to handle the reduced data.
+	1. Open the relevant `start_jupyter_<system>.sh` file and edit the PBS/SLURM header information (the `#PBS`/`#SLURM` lines) to reflect your project (if relevant), required resources, etc. Remember these do not need to represent the total resources you require for the job you have planned because you will be able to request additional resources from within JupyterLab using `dask-jobqueue`. For interactive science work, I usually request few resources for a relatively long time, and then do compute-heavy reduction task(s) on shorter-term `dask-jobqueue` clusters. With this type of workflow, the resources you request in `start_jupyter_<system>.sh` need only reflect what is needed to handle the reduced data.
 
-	You could now go ahead and submit your `start_jupyter_<system>.sh` script to the queue. However, for convenience I've also written a simple function for handling the submission of `start_jupyter_<system>.sh` and parsing instructions from the output file. This function receives some of the key job specifications as optional inputs so you don't have to edit the header on `start_jupyter_<system>.sh` everytime you want to change any of these. It also receives the name of your pangeo-like conda environment as an input. You can append this function to your `.bashrc` by running `./instantiate_pangeo_function.sh`. The `pangeo` function signature is:
+	You could now go ahead and submit your `start_jupyter_<system>.sh` script to the queue. However, for convenience I've also written a simple function for handling the submission of `start_jupyter_<system>.sh` and parsing instructions from the output file. This function receives some of the key job specifications as optional inputs so you don't have to edit the header on `start_jupyter_<system>.sh` every time you want to change any of these. It also receives the name of your pangeo-like conda environment as an input. You can append this function to your `.bashrc` by running: 
+	```
+	./instantiate_pangeo_function.sh
+	```
+	The `pangeo` function signature is:
 	> Gadi: `pangeo walltime(02:00:00) ncpus(4) mem(16GB) project($PROJECT) pangeo_env_name(pangeo) notebook_directory(~)`\
 	> Zeus: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(4GB) account($PAWSEY_PROJECT) pangeo_env_name(pangeo) notebook_directory(~)`\
 	> Pearcey: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(6GB) pangeo_env_name(pangeo) notebook_directory(~)`
@@ -83,12 +75,12 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	```
 	pangeo
 	```
-	To specify a 3 hour job with 6 cpus, one would enter:
+	To specify a 2 hour job with 6 cpus, one would enter:
 	```
-	pangeo 03:00:00 6
+	pangeo 02:00:00 6
 	```
 
-9. Run the `pangeo` function or submit `start_jupyter_<system>.sh` to the queue. For the former, instructions for setting up port forwarding to view your JupyterLab session will be printed to your screen. For the latter, you'll have to parse them from the `jupyter_instructions.txt` file that will appear in the current directory. In both cases, the instructions will only appear once your jobs leaves the queue which may take a minute or so.
+9. Run the `pangeo` function or submit `start_jupyter_<system>.sh` to the queue. For the former, instructions for setting up port forwarding to view your JupyterLab session and dask dashboard will be printed to your screen. For the latter, you'll have to parse them from the `jupyter_instructions.txt` file that will appear in the current directory. In both cases, the instructions will only appear once your jobs leaves the queue which may take a minute or so.
 
 10. Follow the instructions to access your JupyterLab session via a web browser.
 
