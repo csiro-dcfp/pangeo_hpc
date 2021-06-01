@@ -41,7 +41,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	git clone https://github.com/csiro-dcfp/pangeo_hpc.git
 	```
 
-5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `pangeo_environment.yml` file in this repo: 
+5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `pangeo_environment.yml` file in this repo. This should only take a few minutes with a decent internet connection and and file system that supports lots of small files: 
 	```
 	conda env create -f pangeo_environment.yml
 	```
