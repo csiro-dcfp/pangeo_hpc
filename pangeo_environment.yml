@@ -42,6 +42,8 @@ dependencies:
   - cmcrameri=1.2=pyhd8ed1ab_0
   - cmocean=2.0=py_3
   - colorspacious=1.1.2=pyh24bf2e0_0
+  - conda=4.10.1=py39hf3d152e_0
+  - conda-package-handling=1.7.3=py39h3811e60_0
   - cryptography=3.4.7=py39hbca0aa6_0
   - curl=7.77.0=hea6ffbf_0
   - cycler=0.10.0=py_2
@@ -51,6 +53,7 @@ dependencies:
   - dask-jobqueue=0.7.2=pyhd8ed1ab_1
   - dask-labextension=5.0.1=pyhd8ed1ab_1
   - dbus=1.13.6=h48d8840_2
+  - debugpy=1.3.0=py39he80948d_0
   - decorator=5.0.9=pyhd8ed1ab_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
   - distributed=2021.5.1=py39hf3d152e_0
@@ -104,6 +107,7 @@ dependencies:
   - krb5=1.19.1=hcc1bbae_0
   - lcms2=2.12=hddcbb42_0
   - ld_impl_linux-64=2.35.1=hea4e1c9_2
+  - libarchive=3.5.1=h3f442fb_1
   - libblas=3.9.0=9_openblas
   - libcblas=3.9.0=9_openblas
   - libclang=11.1.0=default_ha53f305_1
@@ -133,6 +137,7 @@ dependencies:
   - libpq=13.3=hd57d9b9_0
   - librttopo=1.1.0=h1185371_6
   - libsodium=1.0.18=h36c2ea0_1
+  - libsolv=0.7.18=h780b84a_0
   - libspatialindex=1.9.3=h9c3ff4c_3
   - libspatialite=5.0.1=he52d314_3
   - libssh2=1.9.0=ha56f1ee_6
@@ -147,6 +152,8 @@ dependencies:
   - llvmlite=0.36.0=py39h1bbdace_0
   - locket=0.2.0=py_2
   - lz4-c=1.9.3=h9c3ff4c_0
+  - lzo=2.10=h516909a_1000
+  - mamba=0.13.0=py39h951de11_0
   - markdown-it-py=1.1.0=pyhd8ed1ab_0
   - markupsafe=2.0.1=py39h3811e60_0
   - matplotlib=3.4.2=py39hf3d152e_0
@@ -199,6 +206,7 @@ dependencies:
   - psutil=5.8.0=py39h3811e60_1
   - pthread-stubs=0.4=h36c2ea0_1001
   - ptyprocess=0.7.0=pyhd3deb0d_0
+  - pycosat=0.6.3=py39h3811e60_1006
   - pycparser=2.20=pyh9f0ad1d_2
   - pygments=2.9.0=pyhd8ed1ab_0
   - pyopenssl=20.0.1=pyhd8ed1ab_0
@@ -223,8 +231,11 @@ dependencies:
   - rasterio=1.2.4=py39h63973eb_0
   - readline=8.1=h46c0cb4_0
   - regionmask=0.6.2=pyhd8ed1ab_0
+  - reproc=14.2.1=h36c2ea0_0
+  - reproc-cpp=14.2.1=h58526e2_0
   - requests=2.25.1=pyhd3deb0d_0
   - rtree=0.9.7=py39hb102c33_1
+  - ruamel_yaml=0.15.80=py39h3811e60_1004
   - scikit-learn=0.24.2=py39h4dfa638_0
   - scipy=1.6.3=py39hee8e79c_0
   - send2trash=1.5.0=py_0
@@ -246,6 +257,7 @@ dependencies:
   - toml=0.10.2=pyhd8ed1ab_0
   - toolz=0.11.1=py_0
   - tornado=6.1=py39h3811e60_1
+  - tqdm=4.61.0=pyhd8ed1ab_0
   - traitlets=5.0.5=py_0
   - typing-extensions=3.7.4.3=0
   - typing_extensions=3.7.4.3=py_0
@@ -259,6 +271,8 @@ dependencies:
   - widgetsnbextension=3.5.1=py39hf3d152e_4
   - xarray=0.18.2=pyhd8ed1ab_0
   - xerces-c=3.2.3=h9d8b166_2
+  - xeus=1.0.2=h7d0c39e_1
+  - xeus-python=0.12.4=py39h65d1dfc_0
   - xhistogram=0.1.2=pyhd8ed1ab_0
   - xorg-kbproto=1.0.7=h7f98852_1002
   - xorg-libice=1.0.10=h7f98852_0
