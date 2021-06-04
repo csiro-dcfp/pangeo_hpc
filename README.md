@@ -86,4 +86,19 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 
 11. Do your science. As mentioned above, my typical workflow is to use `dask-jobqueue` to request and access resources for the "heavy-lifting" in my notebooks (e.g. reducing a large dataset down to a 1D or 2D field to plot). Examples of setting up a `dask-jobqueue` cluster are given in the [notebooks](https://github.com/csiro-dcfp/pangeo_hpc/tree/master/notebooks) directory of this repo. 
 
-	Note that getting `dask-jobqueue` running on Gadi requires the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `notebooks/run_dask-jobqueue_Gadi.ipynb`.  
+	Note that getting `dask-jobqueue` running on Gadi requires the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `notebooks/run_dask-jobqueue_Gadi.ipynb`. 
+
+## Optional - add an R kernel and packages:
+1. Create a new conda environment with some essential packages for working with R. Add any other packages you use that aren't included in `r-essentials` here:
+	```
+	conda deactivate
+	conda create -n r_env -c r r-essentials
+	```
+
+2. Register the R kernel with Jupyter:
+	```
+	conda activate r_env
+	Rscript -e 'IRkernel::installspec()'
+	```
+
+Now when you spin up JupyterLab you should be able to select and use your R kernel. 
