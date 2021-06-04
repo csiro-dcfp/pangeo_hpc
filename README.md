@@ -89,7 +89,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	Note that getting `dask-jobqueue` running on Gadi requires the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `notebooks/run_dask-jobqueue_Gadi.ipynb`. 
 
 ## Optional - add an R kernel and packages:
-1. Create a new conda environment with some essential packages for working with R. Add any other packages you use that aren't included in `r-essentials` here:
+1. Create a new conda environment with some essential packages for working with R. You can also add any other packages you use that aren't included in `r-essentials` here:
 	```
 	conda deactivate
 	conda create -n r_env -c r r-essentials
