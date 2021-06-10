@@ -27,6 +27,8 @@ dependencies:
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.17.1=h7f98852_1
   - ca-certificates=2021.5.30=ha878542_0
+  - cached-property=1.5.2=hd8ed1ab_1
+  - cached_property=1.5.2=pyha770c72_1
   - cairo=1.16.0=h6cf1ce9_1008
   - cartopy=0.19.0.post1=py39h3b23250_0
   - certifi=2021.5.30=py39hf3d152e_0
@@ -78,6 +80,8 @@ dependencies:
   - glib-tools=2.68.2=h9c3ff4c_1
   - gst-plugins-base=1.18.4=hf529b03_2
   - gstreamer=1.18.4=h76c114f_2
+  - h5netcdf=0.11.0=pyhd8ed1ab_0
+  - h5py=3.2.1=nompi_py39h98ba4bc_100
   - hdf4=4.2.15=h10796ff_3
   - hdf5=1.10.6=nompi_h6a2412b_1114
   - heapdict=1.0.1=py_0
@@ -173,6 +177,7 @@ dependencies:
   - nc-time-axis=1.2.0=py_1
   - ncurses=6.2=h58526e2_4
   - nest-asyncio=1.5.1=pyhd8ed1ab_0
+  - netcdf4=1.5.6=nompi_py39h36800e2_102
   - notebook=6.4.0=pyha770c72_0
   - nspr=4.30=h9c3ff4c_0
   - nss=3.65=hb5efdd6_0
