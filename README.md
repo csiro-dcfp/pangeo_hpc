@@ -88,6 +88,15 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 
 	Note that getting `dask-jobqueue` running on Gadi requires the manipulation of the default jobscripts submitted by dask's `PBSCluster` into a format that Gadi expects. An example of this hack is given in `notebooks/run_dask-jobqueue_Gadi.ipynb`. 
 
+
+## Optional - register your pangeo environment as an IPython kernel:
+1. Activate your pangeo environment and install it as a ipykernel (you can change the `--name` and `--display-name` if you like):
+	```
+	python -m ipykernel install --user --name pangeo --display-name "Python (pangeo)"
+	```
+  You can add other Python-based conda environments in the same way. This will provide you access to your environments from within JupyterLab and will mean you don't have to restart JupyterLab to effectuate any changes/updates you make to your environments (simply restarting the kernel will do).
+
+
 ## Optional - add an R kernel and packages:
 1. Create a new conda environment and add some essential packages for working with geoscience data in R. Deactivate your pangeo environment and then:
 	```
