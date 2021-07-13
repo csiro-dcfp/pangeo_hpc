@@ -43,6 +43,7 @@ dependencies:
   - cmasher=1.6.2=pyhd8ed1ab_0
   - cmcrameri=1.2=pyhd8ed1ab_0
   - cmocean=2.0=py_3
+  - colorcet=2.0.6=pyhd8ed1ab_0
   - colorspacious=1.1.2=pyh24bf2e0_0
   - conda=4.10.1=py39hf3d152e_0
   - conda-package-handling=1.7.3=py39h3811e60_0
@@ -85,6 +86,7 @@ dependencies:
   - hdf4=4.2.15=h10796ff_3
   - hdf5=1.10.6=nompi_h6a2412b_1114
   - heapdict=1.0.1=py_0
+  - holoviews=1.14.4=pyhd8ed1ab_0
   - icu=68.1=h58526e2_0
   - idna=2.10=pyh9f0ad1d_0
   - importlib-metadata=4.4.0=py39hf3d152e_0
@@ -158,6 +160,7 @@ dependencies:
   - lz4-c=1.9.3=h9c3ff4c_0
   - lzo=2.10=h516909a_1000
   - mamba=0.13.0=py39h951de11_0
+  - markdown=3.3.4=pyhd8ed1ab_0
   - markdown-it-py=1.1.0=pyhd8ed1ab_0
   - markupsafe=2.0.1=py39h3811e60_0
   - matplotlib=3.4.2=py39hf3d152e_0
@@ -191,6 +194,8 @@ dependencies:
   - pandas=1.2.4=py39hde0f152_0
   - pandoc=2.14=h7f98852_0
   - pandocfilters=1.4.2=py_1
+  - panel=0.11.3=pyhd8ed1ab_0
+  - param=1.11.1=pyh6c4a22f_0
   - parso=0.8.2=pyhd8ed1ab_0
   - partd=1.2.0=pyhd8ed1ab_0
   - patsy=0.5.1=py_0
@@ -213,6 +218,8 @@ dependencies:
   - ptyprocess=0.7.0=pyhd3deb0d_0
   - pycosat=0.6.3=py39h3811e60_1006
   - pycparser=2.20=pyh9f0ad1d_2
+  - pyct=0.4.6=py_0
+  - pyct-core=0.4.6=py_0
   - pygments=2.9.0=pyhd8ed1ab_0
   - pyopenssl=20.0.1=pyhd8ed1ab_0
   - pyparsing=2.4.7=pyh9f0ad1d_0
@@ -230,6 +237,7 @@ dependencies:
   - python-dateutil=2.8.1=py_0
   - python_abi=3.9=1_cp39
   - pytz=2021.1=pyhd8ed1ab_0
+  - pyviz_comms=2.1.0=pyhd8ed1ab_0
   - pyyaml=5.4.1=py39h3811e60_0
   - pyzmq=22.1.0=py39h37b5a0c_0
   - qt=5.12.9=hda022c4_4
