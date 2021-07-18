@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#PBS -P v14
+#PBS -P xv83
 #PBS -l storage=gdata/xv83+gdata/v14+gdata/v19+scratch/v14+scratch/ux06+gdata/oi10
 
 #PBS -q express
