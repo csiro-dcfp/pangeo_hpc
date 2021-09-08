@@ -10,7 +10,7 @@
 #PBS -l jobfs=100GB
 #PBS -l wd
 #PBS -j oe
-##PBS -o /dev/null
+#PBS -o /dev/null
 
 # ====================================
 # Submit a job running Jupyter on Gadi

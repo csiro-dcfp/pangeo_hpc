@@ -30,7 +30,7 @@ dependencies:
   - cached-property=1.5.2=hd8ed1ab_1
   - cached_property=1.5.2=pyha770c72_1
   - cairo=1.16.0=h6cf1ce9_1008
-  - cartopy=0.19.0.post1=py39h3b23250_0
+  - cartopy=0.19.0.post1=py39h3b23250_1
   - certifi=2021.5.30=py39hf3d152e_0
   - cffi=1.14.5=py39he32792d_0
   - cfitsio=3.470=hb418390_7
@@ -48,18 +48,18 @@ dependencies:
   - conda=4.10.1=py39hf3d152e_0
   - conda-package-handling=1.7.3=py39h3811e60_0
   - cryptography=3.4.7=py39hbca0aa6_0
-  - curl=7.77.0=hea6ffbf_0
+  - curl=7.78.0=hea6ffbf_0
   - cycler=0.10.0=py_2
   - cytoolz=0.11.0=py39h3811e60_3
-  - dask=2021.7.1=pyhd8ed1ab_0
-  - dask-core=2021.7.1=pyhd8ed1ab_0
-  - dask-jobqueue=0.7.2=pyhd8ed1ab_1
+  - dask=2021.8.1=pyhd8ed1ab_0
+  - dask-core=2021.8.1=pyhd8ed1ab_0
+  - dask-jobqueue=0.7.3=pyhd8ed1ab_0
   - dask-labextension=5.0.1=pyhd8ed1ab_1
   - dbus=1.13.6=h48d8840_2
   - debugpy=1.3.0=py39he80948d_0
   - decorator=5.0.9=pyhd8ed1ab_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
-  - distributed=2021.7.1=py39hf3d152e_0
+  - distributed=2021.8.1=py39hf3d152e_0
   - docrep=0.3.2=pyh44b312d_0
   - e13tools=0.9.6=pyhd8ed1ab_0
   - entrypoints=0.3=pyhd8ed1ab_1003
@@ -104,7 +104,7 @@ dependencies:
   - jupyter_client=6.1.12=pyhd8ed1ab_0
   - jupyter_core=4.7.1=py39hf3d152e_0
   - jupyter_server=1.8.0=pyhd8ed1ab_0
-  - jupyterlab=3.0.16=pyhd8ed1ab_0
+  - jupyterlab=3.1.10=pyhd8ed1ab_0
   - jupyterlab_pygments=0.1.2=pyh9f0ad1d_0
   - jupyterlab_server=2.5.2=pyhd8ed1ab_0
   - jupytext=1.11.2=pyh6c4a22f_0
@@ -117,18 +117,18 @@ dependencies:
   - libblas=3.9.0=9_openblas
   - libcblas=3.9.0=9_openblas
   - libclang=11.1.0=default_ha53f305_1
-  - libcurl=7.77.0=h2574ce0_0
+  - libcurl=7.78.0=h2574ce0_0
   - libdap4=3.20.6=hd7c4107_2
   - libedit=3.1.20191231=he28a2e2_2
   - libev=4.33=h516909a_1
   - libevent=2.1.10=hcdb4288_3
   - libffi=3.3=h58526e2_2
-  - libgcc-ng=9.3.0=h2828fa1_19
+  - libgcc-ng=11.1.0=hc902ee8_8
   - libgdal=3.2.1=h38ff51b_7
   - libgfortran-ng=9.3.0=hff62375_19
   - libgfortran5=9.3.0=hff62375_19
   - libglib=2.68.2=h3e27bee_1
-  - libgomp=9.3.0=h2828fa1_19
+  - libgomp=11.1.0=hc902ee8_8
   - libiconv=1.16=h516909a_0
   - libkml=1.3.0=h238a007_1013
   - liblapack=3.9.0=9_openblas
@@ -143,11 +143,11 @@ dependencies:
   - libpq=13.3=hd57d9b9_0
   - librttopo=1.1.0=h1185371_6
   - libsodium=1.0.18=h36c2ea0_1
-  - libsolv=0.7.18=h780b84a_0
+  - libsolv=0.7.19=h780b84a_5
   - libspatialindex=1.9.3=h9c3ff4c_3
   - libspatialite=5.0.1=he52d314_3
   - libssh2=1.9.0=ha56f1ee_6
-  - libstdcxx-ng=9.3.0=h6de172a_19
+  - libstdcxx-ng=11.1.0=h56837e0_8
   - libtiff=4.2.0=hbd63e13_2
   - libuuid=2.32.1=h7f98852_1000
   - libvorbis=1.3.7=h9c3ff4c_0
@@ -159,7 +159,7 @@ dependencies:
   - locket=0.2.0=py_2
   - lz4-c=1.9.3=h9c3ff4c_0
   - lzo=2.10=h516909a_1000
-  - mamba=0.13.0=py39h951de11_0
+  - mamba=0.15.3=py39h951de11_0
   - markdown=3.3.4=pyhd8ed1ab_0
   - markdown-it-py=1.1.0=pyhd8ed1ab_0
   - markupsafe=2.0.1=py39h3811e60_0
@@ -185,11 +185,11 @@ dependencies:
   - nspr=4.30=h9c3ff4c_0
   - nss=3.65=hb5efdd6_0
   - numba=0.53.1=py39h4292f66_0
-  - numcodecs=0.7.3=py39he80948d_0
-  - numpy=1.20.3=py39hdbf815f_1
+  - numcodecs=0.9.1=py39he80948d_0
+  - numpy=1.21.2=py39hdbf815f_0
   - olefile=0.46=pyh9f0ad1d_1
   - openjpeg=2.4.0=hb52868f_1
-  - openssl=1.1.1k=h7f98852_0
+  - openssl=1.1.1l=h7f98852_0
   - packaging=20.9=pyh44b312d_0
   - pandas=1.2.4=py39hde0f152_0
   - pandoc=2.14=h7f98852_0
@@ -286,7 +286,7 @@ dependencies:
   - xerces-c=3.2.3=h9d8b166_2
   - xeus=1.0.2=h7d0c39e_1
   - xeus-python=0.12.4=py39h65d1dfc_0
-  - xhistogram=0.1.2=pyhd8ed1ab_0
+  - xhistogram=0.3.0=pyhd8ed1ab_0
   - xorg-kbproto=1.0.7=h7f98852_1002
   - xorg-libice=1.0.10=h7f98852_0
   - xorg-libsm=1.2.3=hd9c2040_1000
@@ -298,12 +298,12 @@ dependencies:
   - xorg-renderproto=0.11.1=h7f98852_1002
   - xorg-xextproto=7.3.0=h7f98852_1002
   - xorg-xproto=7.0.31=h7f98852_1007
-  - xrft=0.3.0=pyhd8ed1ab_0
-  - xskillscore=0.0.20=pyhd8ed1ab_1
+  - xrft=0.3.1=pyhd8ed1ab_0
+  - xskillscore=0.0.23=pyhd8ed1ab_0
   - xz=5.2.5=h516909a_1
   - yaml=0.2.5=h516909a_0
   - yarl=1.6.3=py39h3811e60_1
-  - zarr=2.8.3=pyhd8ed1ab_0
+  - zarr=2.9.5=pyhd8ed1ab_0
   - zeromq=4.3.4=h9c3ff4c_0
   - zict=2.0.0=py_0
   - zipp=3.4.1=pyhd8ed1ab_0
