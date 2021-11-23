@@ -19,8 +19,10 @@ dependencies:
   - backcall=0.2.0=pyh9f0ad1d_0
   - backports=1.0=py_2
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
+  - bias_correction=0.4=pyhd8ed1ab_0
   - bleach=3.3.0=pyh44b312d_0
   - bokeh=2.3.2=py39hf3d152e_0
+  - boltons=21.0.0=pyhd8ed1ab_0
   - boost-cpp=1.74.0=hc6e9bd1_3
   - bottleneck=1.3.2=py39hce5d2b2_3
   - brotlipy=0.7.0=py39h3811e60_1001
@@ -32,6 +34,7 @@ dependencies:
   - cairo=1.16.0=h6cf1ce9_1008
   - cartopy=0.19.0.post1=py39h3b23250_1
   - certifi=2021.10.8=py39hf3d152e_1
+  - cf_xarray=0.6.1=pyh6c4a22f_0
   - cffi=1.14.5=py39he32792d_0
   - cfitsio=3.470=hb418390_7
   - cftime=1.5.0=py39hce5d2b2_0
@@ -39,6 +42,7 @@ dependencies:
   - click=7.1.2=pyh9f0ad1d_0
   - click-plugins=1.1.1=py_0
   - cligj=0.7.2=pyhd8ed1ab_0
+  - climpred=2.1.6=pyhd8ed1ab_1
   - cloudpickle=1.6.0=py_0
   - cmasher=1.6.2=pyhd8ed1ab_0
   - cmcrameri=1.2=pyhd8ed1ab_0
@@ -51,18 +55,19 @@ dependencies:
   - curl=7.78.0=hea6ffbf_0
   - cycler=0.10.0=py_2
   - cytoolz=0.11.0=py39h3811e60_3
-  - dask=2021.11.1=pyhd8ed1ab_0
-  - dask-core=2021.11.1=pyhd8ed1ab_0
+  - dask=2021.11.2=pyhd8ed1ab_0
+  - dask-core=2021.11.2=pyhd8ed1ab_0
   - dask-jobqueue=0.7.3=pyhd8ed1ab_0
   - dask-labextension=5.0.1=pyhd8ed1ab_1
   - dbus=1.13.6=h48d8840_2
   - debugpy=1.3.0=py39he80948d_0
   - decorator=5.0.9=pyhd8ed1ab_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
-  - distributed=2021.11.1=py39hf3d152e_0
+  - distributed=2021.11.2=py39hf3d152e_0
   - docrep=0.3.2=pyh44b312d_0
   - e13tools=0.9.6=pyhd8ed1ab_0
   - entrypoints=0.3=pyhd8ed1ab_1003
+  - eofs=1.4.0=py_0
   - expat=2.4.1=h9c3ff4c_0
   - fasteners=0.16=pyhd8ed1ab_0
   - fiona=1.8.18=py39h494ca2c_1
@@ -100,6 +105,7 @@ dependencies:
   - jpeg=9d=h36c2ea0_0
   - json-c=0.15=h98cffda_0
   - json5=0.9.5=pyh9f0ad1d_0
+  - jsonpickle=2.0.0=pyhd8ed1ab_0
   - jsonschema=3.2.0=pyhd8ed1ab_3
   - jupyter-server-proxy=3.0.2=pyhd8ed1ab_0
   - jupyter_client=6.1.12=pyhd8ed1ab_0
@@ -205,6 +211,7 @@ dependencies:
   - pexpect=4.8.0=pyh9f0ad1d_2
   - pickleshare=0.7.5=py_1003
   - pillow=8.2.0=py39hf95b381_1
+  - pint=0.18=pyhd8ed1ab_0
   - pip=21.1.2=pyhd8ed1ab_0
   - pixman=0.40.0=h36c2ea0_0
   - pooch=1.3.0=pyhd8ed1ab_0
@@ -285,6 +292,7 @@ dependencies:
   - wheel=0.36.2=pyhd3deb0d_0
   - widgetsnbextension=3.5.1=py39hf3d152e_4
   - xarray=0.20.1=pyhd8ed1ab_0
+  - xclim=0.31.0=pyhd8ed1ab_0
   - xerces-c=3.2.3=h9d8b166_2
   - xeus=1.0.2=h7d0c39e_1
   - xeus-python=0.12.4=py39h65d1dfc_0
