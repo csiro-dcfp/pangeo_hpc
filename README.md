@@ -1,4 +1,4 @@
-# Scripts and advice for running Pangeo with `dask-jobqueue` on NCI's Gadi, Pawsey's Zeus and CSIRO's Pearcey
+# Scripts and advice for running Pangeo with `dask-jobqueue` on NCI's Gadi, Pawsey's Zeus and CSIRO's Petrichor
 These are the scripts that I (Dougie) use. They may be useful to you.
 
 (Note that the NCI-recommended approach for using Pangeo on Gadi is outlined here: https://nci-data-training.readthedocs.io/en/latest/_notebook/prep/pangeo.html. The scripts and instructions in this repo describe an alternative approach where users can manage their own conda environment and scale clusters using `dask-jobqueue`)
@@ -16,7 +16,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 1. Log in to your system of choice:
 	> Gadi: `ssh -Y <username>@gadi.nci.org.au`\
 	> Zeus: `ssh -Y <username>@zeus.pawsey.org.au`\
-	> Pearcey: `ssh -Y <username>@pearcey.hpc.csiro.au`
+	> Petrichor: `ssh -Y <username>@petrichor.hpc.csiro.au`
 
 2. If you don't have conda installed or access to conda (try `which conda`), install it:  
 	```
@@ -24,13 +24,13 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	chmod +x Miniconda3-latest-Linux-x86_64.sh
 	./Miniconda3-latest-Linux-x86_64.sh
 	```  
-	You'll get prompted for where to install conda. The default is home, which may be quite limited for space. It may therefore be a good idea to instead use a different persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Pearcey.
+	You'll get prompted for where to install conda. The default is home, which may be quite limited for space. It may therefore be a good idea to instead use a different persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Petrichor.
 	
 	Note, to run the scripts in this repo `conda` will need to be initialised. When you first install conda you will be given the option to append some lines to your `.bashrc` that will initialise `conda` every time you log in. I recommend doing this. Otherwise, you'll have to initialise `conda` manually before progressing.
 	
 3. If there's any possibility you might edit the scripts in this repo and want to keep track of your edits using git, create a fork of this repo under your own github account by clicking on the `Fork` button on the top right of this page. Doing this will create a replica of this repo under your username at `https://github.com/<your_username>/pangeo_hpc.git`. If you don't have a github account and you don't want to create one, go to step 4.
 	
-4. Clone your fork of this repo to a location of your choice on Gadi, Zeus or Pearcey: go to the desired location and run 
+4. Clone your fork of this repo to a location of your choice on Gadi, Zeus or Petrichor: go to the desired location and run 
 	```
 	git clone https://github.com/<your_username>/pangeo_hpc.git
 	``` 
@@ -69,7 +69,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	The `pangeo` function signature is:
 	> Gadi: `pangeo walltime(02:00:00) ncpus(4) mem(16GB) project($PROJECT) pangeo_env_name(pangeo) notebook_directory(~)`\
 	> Zeus: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(4GB) account($PAWSEY_PROJECT) pangeo_env_name(pangeo) notebook_directory(~)`\
-	> Pearcey: `pangeo time(02:00:00) cpus_per_task(4) mem-per-cpu(6GB) pangeo_env_name(pangeo) notebook_directory(~)`
+	> Petrichor: `pangeo time(02:00:00) cpus_per_task(8) mem-per-cpu(64GB) pangeo_env_name(pangeo) notebook_directory(~)`
 	
 	where the defaults are given in brackets. For example, to run with the default settings, one would simply enter into their terminal:
 	```

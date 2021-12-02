@@ -13,8 +13,8 @@ APPEND_TO=~/.bashrc
 
 if [[ "$HOSTNAME" == *"gadi"* ]]; then
     SYSTEM=gadi
-elif [[ "$HOSTNAME" == *"pearcey"* ]]; then
-    SYSTEM=pearcey
+elif [[ "$HOSTNAME" == *"petrichor"* ]]; then
+    SYSTEM=petrichor
 elif [[ "$HOSTNAME" == *"zeus"* ]]; then
     SYSTEM=zeus
 else 
@@ -46,11 +46,11 @@ if [[ "$SYSTEM" == "gadi" ]]; then
     qdel ${jobid}
     trap - INT
 }'
-elif [[ "$SYSTEM" == "pearcey" ]]; then
+elif [[ "$SYSTEM" == "petrichor" ]]; then
     PANGEO_FUNCTION='function pangeo {
     WALLTIME=${1:-"02:00:00"}
-    NCPUS=${2:-"4"}
-    MEM=${3:-"6GB"}
+    NCPUS=${2:-"8"}
+    MEM=${3:-"64GB"}
     PANGEO_ENV_NAME=${4:-"pangeo"}
     NOTEBOOK_DIR=${5:-"~"}
     PANGEO_RUN_SCRIPT_DIR="'$(pwd)'"
@@ -59,7 +59,7 @@ elif [[ "$SYSTEM" == "pearcey" ]]; then
     
     jobid=$(sbatch --time=${WALLTIME} --mem-per-cpu=${MEM} --cpus-per-task=${NCPUS} \
     	--export "NOTEBOOK_DIR=${NOTEBOOK_DIR},RUN_SCRIPT_DIR=${PANGEO_RUN_SCRIPT_DIR},PANGEO_ENV_NAME=${PANGEO_ENV_NAME}" \
-	${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Pearcey.sh | sed '\''s/[^0-9]*//g'\'')
+	${PANGEO_RUN_SCRIPT_DIR}/start_jupyter_Petrichor.sh | sed '\''s/[^0-9]*//g'\'')
     while [ ! -f jupyter_instructions.txt ]; do
         sleep 1
     done

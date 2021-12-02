@@ -7,12 +7,12 @@
 #SBATCH --output=/dev/null 
 
 # ====================================
-# Submit a job running Jupyter on Pearcey
+# Submit a job running Jupyter on Petrichor
 #
 #    USAGE: qsub --export NOTEBOOK_DIR=<directory to start notebook in> \
 #                --export RUN_SCRIPT_DIR=<location of start_jupyter.sh> \
 #                --export PANGEO_ENV_NAME=<name of pangeo environment> \
-#                start_jupyter_Pearcey.sh
+#                start_jupyter_Petrichor.sh
 #
 #    Dougie Squire
 #    19/08/2020
@@ -29,6 +29,6 @@ fi
 LOG_DIR=/scratch1/${USER}/tmp/logs
 # ----------------------------
 
-HPC_ADDRESS=pearcey.hpc.csiro.au
+HPC_ADDRESS=petrichor.hpc.csiro.au
 
 ${RUN_SCRIPT_DIR}/start_jupyter.sh ${NOTEBOOK_DIR} ${LOG_DIR} ${HPC_ADDRESS} ${PANGEO_ENV_NAME}
