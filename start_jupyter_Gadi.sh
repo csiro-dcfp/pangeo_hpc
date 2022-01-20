@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #PBS -P xv83
-#PBS -l storage=gdata/xv83+gdata/v14+gdata/v19+scratch/v14+scratch/ux06+gdata/oi10
+#PBS -l storage=gdata/xv83+gdata/v14+gdata/v19+gdata/zv2+scratch/v14+scratch/ux06+gdata/oi10
 
 #PBS -q normal
 #PBS -l walltime=02:00:00
