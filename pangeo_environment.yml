@@ -40,7 +40,7 @@ dependencies:
   - cf_xarray=0.6.1=pyh6c4a22f_0
   - cffi=1.14.5=py39he32792d_0
   - cfitsio=3.470=hb418390_7
-  - cftime=1.5.0=py39hce5d2b2_0
+  - cftime=1.5.2=py39hce5d2b2_0
   - chardet=4.0.0=py39hf3d152e_1
   - click=7.1.2=pyh9f0ad1d_0
   - click-plugins=1.1.1=py_0
@@ -338,4 +338,3 @@ dependencies:
     - jupyter-resource-usage==0.6.0
     - jupyterlab-system-monitor==0.8.0
     - jupyterlab-topbar==0.6.1
-prefix: /g/data/xv83/users/ds0092/software/miniconda3/envs/pangeo
