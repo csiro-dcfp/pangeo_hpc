@@ -28,7 +28,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	
 	Note, to run the scripts in this repo `conda` will need to be initialised. When you first install conda you will be given the option to append some lines to your `.bashrc` that will initialise `conda` every time you log in. I recommend doing this. Otherwise, you'll have to initialise `conda` manually before progressing.
 	
-3. If there's any possibility you might edit the scripts in this repo and want to keep track of your edits using git, create a fork of this repo under your own github account by clicking on the `Fork` button on the top right of this page. Doing this will create a replica of this repo under your username at `https://github.com/<your_username>/pangeo_hpc.git`. If you don't have a github account and you don't want to create one, go to step 4.
+3. If there's any possibility you might edit the scripts in this repo and want to keep track of your edits using git, create a fork of this repo under your own github account by clicking on the `Fork` button on the top right of this page (strongly recommended). Doing this will create a replica of this repo under your username at `https://github.com/<your_username>/pangeo_hpc.git`. If you don't have a github account and you don't want to create one, go to step 4.
 	
 4. Clone your fork of this repo to a location of your choice on Gadi, Zeus or Petrichor: go to the desired location and run 
 	```
