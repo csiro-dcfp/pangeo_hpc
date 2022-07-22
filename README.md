@@ -1,7 +1,7 @@
 # Scripts and advice for running Pangeo with `dask-jobqueue` on NCI's Gadi, Pawsey's Zeus and CSIRO's Petrichor
 These are the scripts that I (Dougie) use. They may be useful to you.
 
-(Note that the NCI-recommended approach for using Pangeo on Gadi is outlined here: https://nci-data-training.readthedocs.io/en/latest/_notebook/prep/pangeo.html. The scripts and instructions in this repo describe an alternative approach where users can manage their own conda environment and scale clusters using `dask-jobqueue`)
+(Note that NCI now provides access to a JupyterLab environment on Gadi via the [Australian Research Environment](https://are.nci.org.au/). This is the recommended approach for running Pangeo workflows on NCI. The scripts and instructions in this repo describe an alternative approach that can be easily deployed across different HPC systems.)
 
 ## Prerequisites
 Users will need to be able to log in to their system of interest. To use Gadi and Pawsey, users will need to be able to request resources under a project. 
@@ -41,13 +41,13 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	git clone https://github.com/csiro-dcfp/pangeo_hpc.git
 	```
 
-5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `pangeo_environment.yml` file in this repo. This should only take a few minutes with a decent internet connection and and file system that supports lots of small files: 
+5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `environment.yml` file in this repo. This should only take a few minutes with a decent internet connection and and file system that supports lots of small files: 
 	```
-	conda env create -f pangeo_environment.yml
+	conda env create -f environment.yml
 	```
 	This will create a new conda environment called `pangeo`. If you wish to use a different name: 
 	```
-	conda env create --name <different_name> -f pangeo_environment.yml
+	conda env create --name <different_name> -f environment.yml
 	```
 
 6. Activate your new `pangeo` environment and configure your Jupyter password (note, in a previous version of these instructions, you would have also installed and enabled a number of Jupyter labextensions at this point. This is no longer necessary with JupyterLab version 3): 
