@@ -42,12 +42,13 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	```
 
 5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `environment.yml` file in this repo. This should only take a few minutes with a decent internet connection and and file system that supports lots of small files. If you have permission to install into your conda `(base)` environment (e.g. if you install conda yourself) it's fastest to do this step with mamba, which works like conda but is written in C++. Otherwise you can use conda to create the environment:
+	If you can install into `(base)`:
 	```
-	# If you can install into (base)
 	conda install mamba -y
 	mamba env create -f environment.yml
-
-	# Otherwise
+	```
+	Otherwise:
+	```
 	conda env create -f environment.yml
 	```
 	This will create a new conda environment called `pangeo`. If you wish to use a different name, e.g.: 
