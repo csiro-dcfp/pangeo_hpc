@@ -26,7 +26,7 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	```  
 	You'll get prompted for where to install conda. The default is home, which may be quite limited for space. It may therefore be a good idea to instead use a different persistent location, e.g. `/g/data` on Gadi, `/group` on Zeus or Bowen storage on Petrichor.
 	
-	Note, to run the scripts in this repo `conda` will need to be initialised. When you first install conda you will be given the option to append some lines to your `.bashrc` that will initialise `conda` every time you log in. I recommend doing this. Otherwise, you'll have to initialise `conda` manually before progressing.
+	Note, to run the scripts in this repo `conda` will need to be initialised. When you first install conda you will be given the option to append some lines to your `.bashrc` that will initialise `conda` and activate a `(base)` environment every time you log in. I recommend doing this. Otherwise, you'll have to initialise `conda` manually before progressing.
 	
 3. If there's any possibility you might edit the scripts in this repo and want to keep track of your edits using git, create a fork of this repo under your own github account by clicking on the `Fork` button on the top right of this page (strongly recommended). Doing this will create a replica of this repo under your username at `https://github.com/<your_username>/pangeo_hpc.git`. If you don't have a github account and you don't want to create one, go to step 4.
 	
@@ -41,11 +41,16 @@ Ideally, users will have a github account (it's free and easy to set up [here](h
 	git clone https://github.com/csiro-dcfp/pangeo_hpc.git
 	```
 
-5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `environment.yml` file in this repo. This should only take a few minutes with a decent internet connection and and file system that supports lots of small files: 
+5. If you don't already have a pangeo-like conda environment (containing `jupyter`, `xarray`, `dask`...), create one using the `environment.yml` file in this repo. This should only take a few minutes with a decent internet connection and and file system that supports lots of small files. If you have permission to install into your conda `(base)` environment (e.g. if you install conda yourself) it's fastest to do this step with mamba, which works like conda but is written in C++. Otherwise you can use conda to create the environment:
 	```
+	# If you can install into (base)
+	conda install mamba -y
+	mamba env create -f environment.yml
+
+	# Otherwise
 	conda env create -f environment.yml
 	```
-	This will create a new conda environment called `pangeo`. If you wish to use a different name: 
+	This will create a new conda environment called `pangeo`. If you wish to use a different name, e.g.: 
 	```
 	conda env create --name <different_name> -f environment.yml
 	```

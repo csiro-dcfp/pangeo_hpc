@@ -1,5 +1,6 @@
 #!/bin/bash -l
 
+#SBATCH --account=OD-12345
 #SBATCH --time=02:00:00
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=32G
